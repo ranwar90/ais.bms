@@ -1,0 +1,4417 @@
+{
+ "students": {
+  "S160018": {
+   "className": "8K",
+   "contact": "",
+   "name": "Faisal Mansour Mohammed Saleh Alsalman"
+  },
+  "S160106": {
+   "className": "8C",
+   "contact": "",
+   "name": "Mowaffak Dali Balta"
+  },
+  "S160187": {
+   "className": "8B",
+   "contact": "",
+   "name": "Tamim Talal Othman Abdulmohsen Almuammar"
+  },
+  "S160216": {
+   "className": "8A",
+   "contact": "",
+   "name": "Abderrahmen Ahmed Bouzaien"
+  },
+  "S160226": {
+   "className": "8B",
+   "contact": "",
+   "name": "Hashem Suliman Almasri"
+  },
+  "S160268": {
+   "className": "8A",
+   "contact": "",
+   "name": "Ahmad Ashraf Ahmad Omar"
+  },
+  "S160313": {
+   "className": "8J",
+   "contact": "",
+   "name": "Turki Abdullah Abdulrahman Abdulaziz Alhowish"
+  },
+  "S160411": {
+   "className": "8A",
+   "contact": "",
+   "name": "Ahmad Mohammad Sohail Assad Bin Sohail"
+  },
+  "S160443": {
+   "className": "8A",
+   "contact": "",
+   "name": "Awab Nabeel Khan"
+  },
+  "S160489": {
+   "className": "8G",
+   "contact": "",
+   "name": "Malek Mohamed Gamal Galal Ahmed"
+  },
+  "S160561": {
+   "className": "8K",
+   "contact": "",
+   "name": "Fahad Nawaf Fahad Muneer Alotaibi"
+  },
+  "S160686": {
+   "className": "8I",
+   "contact": "",
+   "name": "Bader Abduallah Ahmed Saleh Alamri"
+  },
+  "S160712": {
+   "className": "8H",
+   "contact": "",
+   "name": "Anas Mohammad Ahmed Jaber"
+  },
+  "S160831": {
+   "className": "8I",
+   "contact": "",
+   "name": "Ahmad Nidal Ishaq Abu Markhieh"
+  },
+  "S160960": {
+   "className": "8B",
+   "contact": "",
+   "name": "Almonther Mohammed Ibrahim Mohammed Alshalaan"
+  },
+  "S160969": {
+   "className": "8A",
+   "contact": "",
+   "name": "Abdullah Hasan Abbod Ahmed Ba Sawlan"
+  },
+  "S161071": {
+   "className": "8E",
+   "contact": "",
+   "name": "Muhammad Hamdan Muhammad Raza"
+  },
+  "S161104": {
+   "className": "8H",
+   "contact": "",
+   "name": "Anas Haitham Mohamed Kotb Hussein"
+  },
+  "S161113": {
+   "className": "8A",
+   "contact": "",
+   "name": "Khalid Mohammed Hassan Albadry Ahmed"
+  },
+  "S161119": {
+   "className": "8E",
+   "contact": "",
+   "name": "Mohammad Abdullah Agha Farrukh Sohail Farrukh"
+  },
+  "S161149": {
+   "className": "8A",
+   "contact": "",
+   "name": "Alfahad Mansour Abdulsalam Mansour Alzughaibi"
+  },
+  "S161201": {
+   "className": "8I",
+   "contact": "",
+   "name": "Hisham Hadi Baghdadi"
+  },
+  "S161204": {
+   "className": "8G",
+   "contact": "",
+   "name": "Amr Islam Elsaid Elkotb Zidan"
+  },
+  "S161263": {
+   "className": "8J",
+   "contact": "",
+   "name": "Abdel Rahman Faisal Abdel-Rahman Abbadi"
+  },
+  "S170008": {
+   "className": "8A",
+   "contact": "",
+   "name": "Abdullah Ameen Imtiaz"
+  },
+  "S170009": {
+   "className": "8G",
+   "contact": "",
+   "name": "Saad Abdullah Saad Saud Alshoqiran"
+  },
+  "S170010": {
+   "className": "8L",
+   "contact": "",
+   "name": "Zeyad Mahmoud Ahmed Abdelfatah Mahmoud Elabgy"
+  },
+  "S170025": {
+   "className": "8G",
+   "contact": "",
+   "name": "Faris Khalid Zead Rashed Altamimi"
+  },
+  "S170038": {
+   "className": "8B",
+   "contact": "",
+   "name": "Yahya Hani Yahya Nasser Alrehayan"
+  },
+  "S170069": {
+   "className": "8A",
+   "contact": "",
+   "name": "Abdullah Imran Zaheer"
+  },
+  "S170070": {
+   "className": "8E",
+   "contact": "",
+   "name": "Abdulbaseer Muhammad Azhar"
+  },
+  "S170071": {
+   "className": "8G",
+   "contact": "",
+   "name": "Mostafa Mohamed Mostafa Elsayed Ashmawy"
+  },
+  "S170074": {
+   "className": "8J",
+   "contact": "",
+   "name": "Omar Maher Ali Abdulhadi Abdulrahman"
+  },
+  "S170075": {
+   "className": "8K",
+   "contact": "",
+   "name": "Khalid Bandar Muhammed Dakhil Alnajem"
+  },
+  "S170092": {
+   "className": "8E",
+   "contact": "",
+   "name": "Muhammad Raiyan Naveed"
+  },
+  "S170119": {
+   "className": "8J",
+   "contact": "",
+   "name": "Nasser Hassan Nasser Saad Almutlaq"
+  },
+  "S170186": {
+   "className": "8L",
+   "contact": "",
+   "name": "Ziad Emad Mohamed Adel Saleh Mohamed Elhout"
+  },
+  "S170249": {
+   "className": "8A",
+   "contact": "",
+   "name": "Huzaifa Faisal Faisal"
+  },
+  "S170288": {
+   "className": "8K",
+   "contact": "",
+   "name": "Samir Abdallah Samir Abdallah Aly"
+  },
+  "S170326": {
+   "className": "8K",
+   "contact": "",
+   "name": "Nasser Mohammed Nasser Mohammed Aljohaimi"
+  },
+  "S170511": {
+   "className": "8J",
+   "contact": "",
+   "name": "Ahmed Anas Ahmed Ali Almubarki"
+  },
+  "S170521": {
+   "className": "8B",
+   "contact": "",
+   "name": "Faisal Abdulrhman Mosleh Mahl Alradadi"
+  },
+  "S170528": {
+   "className": "8I",
+   "contact": "",
+   "name": "Abdulmalik Bashar Ali Abdulhadi Abdulrahman"
+  },
+  "S170529": {
+   "className": "8E",
+   "contact": "",
+   "name": "Muhammad Mohid Muhammad Adnan Rasheed"
+  },
+  "S170548": {
+   "className": "8G",
+   "contact": "",
+   "name": "Mohammed Abdullateef Ahmed Abdullateef Alfuraihi"
+  },
+  "S170551": {
+   "className": "8G",
+   "contact": "",
+   "name": "Sami Ahmad Sami Alkatari"
+  },
+  "S170581": {
+   "className": "8A",
+   "contact": "",
+   "name": "Sattam Mashoor Abdulaziz Mamdooh Al Ali"
+  },
+  "S170602": {
+   "className": "8F",
+   "contact": "",
+   "name": "Yahya Murad Ziada Murad Hamoor"
+  },
+  "S170624": {
+   "className": "8I",
+   "contact": "",
+   "name": "Abdullah Bandar Abdullah Awad Alqahtani"
+  },
+  "S170653": {
+   "className": "8J",
+   "contact": "",
+   "name": "Abdulaziz Badah Mohammed Dakhil Allah Alsahli"
+  },
+  "S170670": {
+   "className": "8A",
+   "contact": "",
+   "name": "Khalid Mohammed Abdulrahman Mohammed Alhussein"
+  },
+  "S170686": {
+   "className": "8J",
+   "contact": "",
+   "name": "Abdulaziz Saud Abdulaziz Mohammed Alsayari"
+  },
+  "S170694": {
+   "className": "8I",
+   "contact": "",
+   "name": "Abdulaziz Khalid Suliman Abdulaziz Almehazaa"
+  },
+  "S170700": {
+   "className": "8G",
+   "contact": "",
+   "name": "Abdulaziz Abdullah Abdulaziz Othman Alrashid"
+  },
+  "S170765": {
+   "className": "8B",
+   "contact": "",
+   "name": "Abdullah Abdulrahman Abdullah Abdulrahman Aljubair"
+  },
+  "S170776": {
+   "className": "8I",
+   "contact": "",
+   "name": "Mohammed Khaled Mohammed Hamed Almanea"
+  },
+  "S170788": {
+   "className": "8B",
+   "contact": "",
+   "name": "Abdulaziz Ali Mohammed Ali Binmughamis"
+  },
+  "S170831": {
+   "className": "8I",
+   "contact": "",
+   "name": "Motaz Abubaker Na'eem Sweidan"
+  },
+  "S170843": {
+   "className": "8A",
+   "contact": "",
+   "name": "TAMEEM HAZVANI"
+  },
+  "S170883": {
+   "className": "8J",
+   "contact": "",
+   "name": "Ahmed Khader"
+  },
+  "S170936": {
+   "className": "8C",
+   "contact": "",
+   "name": "Nawaf Yazeed Abdulaziz Abdullah Aldakhil"
+  },
+  "S170953": {
+   "className": "8G",
+   "contact": "",
+   "name": "Ali Nahed Ali Saleam Abdalah Salman"
+  },
+  "S170973": {
+   "className": "8J",
+   "contact": "",
+   "name": "Abdullah Mohammed Nasser Suliman Aljurbua"
+  },
+  "S170981": {
+   "className": "8I",
+   "contact": "",
+   "name": "Abdullah Mahmoud Ahmad Hashim Al-Sayyed"
+  },
+  "S170985": {
+   "className": "8B",
+   "contact": "",
+   "name": "Khalid Adel Khalid Saad Alfozan"
+  },
+  "S170986": {
+   "className": "8C",
+   "contact": "",
+   "name": "Saud Faisal Saleh Mohammed Alturaif"
+  },
+  "S171069": {
+   "className": "8B",
+   "contact": "",
+   "name": "Tariq Ziyad Abdulmalik Abdullah Al Alshaikh"
+  },
+  "S171266": {
+   "className": "8C",
+   "contact": "",
+   "name": "Yhya Shehabeldin Hassan Abdelhalim Amin"
+  },
+  "S171285": {
+   "className": "8G",
+   "contact": "",
+   "name": "Abdulaziz Sultan Mohammad Abdulwahab Abumelha"
+  },
+  "S171290": {
+   "className": "8E",
+   "contact": "",
+   "name": "Huzaifa Mohsin Muhammad Mohsin Khan"
+  },
+  "S180008": {
+   "className": "8K",
+   "contact": "",
+   "name": "Mohammad Nasser A Zuraybah"
+  },
+  "S180024": {
+   "className": "8C",
+   "contact": "",
+   "name": "Mohammed Hussain S Alshuwaysh"
+  },
+  "S180029": {
+   "className": "8J",
+   "contact": "",
+   "name": "Abdulaziz Ahmed A Alrubaian"
+  },
+  "S180037": {
+   "className": "8A",
+   "contact": "",
+   "name": "Eisa Naeem"
+  },
+  "S180075": {
+   "className": "8C",
+   "contact": "",
+   "name": "Yousef Mahfouz Saeed Al-Asali"
+  },
+  "S180086": {
+   "className": "8J",
+   "contact": "",
+   "name": "Abdullah Fahad Maqbel Abdulrahman Almoqbel"
+  },
+  "S180098": {
+   "className": "8I",
+   "contact": "",
+   "name": "Faisal Abdullah Abdulrahman Saleh Alnamlah"
+  },
+  "S180119": {
+   "className": "8G",
+   "contact": "",
+   "name": "Saud Suliman Khalifah Ibrahim Altamimi"
+  },
+  "S180157": {
+   "className": "8B",
+   "contact": "",
+   "name": "Moayad Abdullah Saad Mohammad Alqedairi"
+  },
+  "S180162": {
+   "className": "8L",
+   "contact": "",
+   "name": "Faisal Nasser H Altheeb"
+  },
+  "S180246": {
+   "className": "8E",
+   "contact": "",
+   "name": "Muhammad Talal Zaheer Mehmood"
+  },
+  "S180337": {
+   "className": "8K",
+   "contact": "",
+   "name": "Saud Ibrahim Hammad Abdullah Alqudairy"
+  },
+  "S180338": {
+   "className": "8E",
+   "contact": "",
+   "name": "Muaz Asad Bashir Awan"
+  },
+  "S180339": {
+   "className": "8E",
+   "contact": "",
+   "name": "Muhammad Asad Hanan Muhammad Imran Saeed"
+  },
+  "S180377": {
+   "className": "8G",
+   "contact": "",
+   "name": "Faisal Abdullah Turki Mashara Alkirnaf"
+  },
+  "S180387": {
+   "className": "8A",
+   "contact": "",
+   "name": "Seif Elsayed Khalil Elsayed Ibrahim"
+  },
+  "S180443": {
+   "className": "8B",
+   "contact": "",
+   "name": "Rayan Fahad Mohmmad Saleh Abdullah Aldeligan"
+  },
+  "S180497": {
+   "className": "8K",
+   "contact": "",
+   "name": "Mohammed Abdullah M Almansour"
+  },
+  "S180518": {
+   "className": "8I",
+   "contact": "",
+   "name": "Abdulaziz Yahya Hussain Ali Alshmali"
+  },
+  "S180580": {
+   "className": "8C",
+   "contact": "",
+   "name": "Ziad Mohamed Elsaid Radwan"
+  },
+  "S180595": {
+   "className": "8K",
+   "contact": "",
+   "name": "Faisal Fahad Abdullah Rashad Alhaqbani"
+  },
+  "S180607": {
+   "className": "8J",
+   "contact": "",
+   "name": "Saad Abdullah Saad Mohammad Almarshad"
+  },
+  "S180625": {
+   "className": "8G",
+   "contact": "",
+   "name": "Badr Abdourahmane Ahmed Al Ansary"
+  },
+  "S180690": {
+   "className": "8G",
+   "contact": "",
+   "name": "Mostafa Abduljawad"
+  },
+  "S180717": {
+   "className": "8J",
+   "contact": "",
+   "name": "Mohammed Faisal M Alhawas"
+  },
+  "S180719": {
+   "className": "8J",
+   "contact": "",
+   "name": "Abdulmajid Abdullah Abdulkarim Jazea Alshammari"
+  },
+  "S180727": {
+   "className": "8G",
+   "contact": "",
+   "name": "Bandar Sultan Dhim Awid Almutairi"
+  },
+  "S180748": {
+   "className": "8B",
+   "contact": "",
+   "name": "Saud Faisal Rumyyan Saleh Alrumyyan"
+  },
+  "S180805": {
+   "className": "8B",
+   "contact": "",
+   "name": "Sulaiman Abdulrahman Abdullah Abdulrahman Alrajhi"
+  },
+  "S180897": {
+   "className": "8J",
+   "contact": "",
+   "name": "Ali Hamad Ali Hamad Alsubaie"
+  },
+  "S180995": {
+   "className": "8I",
+   "contact": "",
+   "name": "Mohammed Hassan Mohammed Hassan Alahedeb"
+  },
+  "S181038": {
+   "className": "8H",
+   "contact": "",
+   "name": "Yazan Mohammed Saleh Mohammed Bamajboor"
+  },
+  "S190029": {
+   "className": "8A",
+   "contact": "",
+   "name": "Ibrahim Atif Khan"
+  },
+  "S190034": {
+   "className": "8I",
+   "contact": "",
+   "name": "Karam Ala Ibrahim Alhalaysi"
+  },
+  "S190046": {
+   "className": "8K",
+   "contact": "",
+   "name": "Mohammed A. M. Zaqout"
+  },
+  "S190050": {
+   "className": "8B",
+   "contact": "",
+   "name": "Faisal Osamah Ali Abdullah Alghazi"
+  },
+  "S190083": {
+   "className": "8J",
+   "contact": "",
+   "name": "Sultan Mohanned Mohammed Ali Alali"
+  },
+  "S190213": {
+   "className": "8F",
+   "contact": "",
+   "name": "Rohaan Adnan Hussain Adnan"
+  },
+  "S190334": {
+   "className": "8A",
+   "contact": "",
+   "name": "Aadam Abshir Hussein"
+  },
+  "S190441": {
+   "className": "8I",
+   "contact": "",
+   "name": "Abdulrahman Yousif Masaad Elfadol"
+  },
+  "S190471": {
+   "className": "8I",
+   "contact": "",
+   "name": "Haitham Azzam Daifullah Thaar Alotaibi"
+  },
+  "S190481": {
+   "className": "8F",
+   "contact": "",
+   "name": "Ammar Azhad Bin Mohd Azman"
+  },
+  "S190539": {
+   "className": "8K",
+   "contact": "",
+   "name": "Abdulmalek Fahad Aoudah Mushraf Alamri"
+  },
+  "S190677": {
+   "className": "8B",
+   "contact": "",
+   "name": "Abdullah Khudhair Mohammed Abdulrahman Alkhudhair"
+  },
+  "S190713": {
+   "className": "8A",
+   "contact": "",
+   "name": "Yousef Tareq Mohammed Abdullah Alshabani"
+  },
+  "S190782": {
+   "className": "8J",
+   "contact": "",
+   "name": "Faisal Fahmi F. Alnabulsi"
+  },
+  "S190799": {
+   "className": "8G",
+   "contact": "",
+   "name": "Ali Mohammed Shatrein Hamad Al Mehthel"
+  },
+  "S190938": {
+   "className": "8B",
+   "contact": "",
+   "name": "Mohamed Abdelaziz Elsafi Elsharif"
+  },
+  "S190949": {
+   "className": "8E",
+   "contact": "",
+   "name": "Umer Naveed"
+  },
+  "S190957": {
+   "className": "8E",
+   "contact": "",
+   "name": "Hasan Nasir Bakshi"
+  },
+  "S191183": {
+   "className": "8L",
+   "contact": "",
+   "name": "Abdullah Mohammed Hawi Ghurm Alshehri"
+  },
+  "S200176": {
+   "className": "8J",
+   "contact": "",
+   "name": "Abdulrhman Tariq Abdulrhaman Ali Alghamdi"
+  },
+  "S200204": {
+   "className": "8E",
+   "contact": "",
+   "name": "Ghali Yousef Saleh Mohammed Alsudais"
+  },
+  "S200232": {
+   "className": "8I",
+   "contact": "",
+   "name": "Saud Hazza H Alotaibi"
+  },
+  "S200299": {
+   "className": "8I",
+   "contact": "",
+   "name": "Khalid Abdullah Mohammed Saad Alqahtani"
+  },
+  "S200304": {
+   "className": "8G",
+   "contact": "",
+   "name": "Mohammed Awad Abdullah Matar Alomari"
+  },
+  "S200339": {
+   "className": "8C",
+   "contact": "",
+   "name": "Mohammad Shamel Arnous"
+  },
+  "S200369": {
+   "className": "8F",
+   "contact": "",
+   "name": "Hassan Mohammed Hassan"
+  },
+  "S200508": {
+   "className": "8F",
+   "contact": "",
+   "name": "Sulaiman Mohamed Rikaz"
+  },
+  "S210073": {
+   "className": "8K",
+   "contact": "",
+   "name": "Abdulaziz Hamad A Al Halaibi"
+  },
+  "S210128": {
+   "className": "8K",
+   "contact": "",
+   "name": "Hamza Gamal Said Ahmed Youseef"
+  },
+  "S210453": {
+   "className": "8A",
+   "contact": "",
+   "name": "Abdur Rahman Bin Shaqeel Ahmed"
+  },
+  "S210548": {
+   "className": "8K",
+   "contact": "",
+   "name": "Mohammed Aiman M Alsnan"
+  },
+  "S210560": {
+   "className": "8F",
+   "contact": "",
+   "name": "Abdul Haadi Muhammad Taha Mustafa"
+  },
+  "S210574": {
+   "className": "8K",
+   "contact": "",
+   "name": "Abdulhakam Ehab Zaki Imam Alsayed"
+  },
+  "S210808": {
+   "className": "8F",
+   "contact": "",
+   "name": "Aariz Ahmad Salman Ahmad Syed"
+  },
+  "S210811": {
+   "className": "8F",
+   "contact": "",
+   "name": "Syed Wasi Muhammad Syed Wajid Hussain"
+  },
+  "S220070": {
+   "className": "8C",
+   "contact": "",
+   "name": "Ahmed Mohamed Ahmed Elsayeh"
+  },
+  "S220073": {
+   "className": "8L",
+   "contact": "",
+   "name": "salman ahmed yousef alshibly"
+  },
+  "S220086": {
+   "className": "8J",
+   "contact": "",
+   "name": "Raad Bariq Alassaf"
+  },
+  "S220091": {
+   "className": "8E",
+   "contact": "",
+   "name": "Muhammad Usman Ahmar Nishat Farooqi"
+  },
+  "S220096": {
+   "className": "8L",
+   "contact": "",
+   "name": "Ahmed Wallyeddin Mohamed Abdelmahmoud"
+  },
+  "S220132": {
+   "className": "8H",
+   "contact": "",
+   "name": "Talal Abdaullah Mohammed Alnajran"
+  },
+  "S220168": {
+   "className": "8H",
+   "contact": "",
+   "name": "Fahad Abdullah Abdulrahman Almejrad"
+  },
+  "S220321": {
+   "className": "8L",
+   "contact": "",
+   "name": "Abdulaziz Fares MEAILE ALMEAILE"
+  },
+  "S220384": {
+   "className": "8L",
+   "contact": "",
+   "name": "Bader Ramiz tawfiq Al Rabeah"
+  },
+  "S220385": {
+   "className": "8K",
+   "contact": "",
+   "name": "Fahad Ramiz Tawfiq Al Rabeah"
+  },
+  "S220409": {
+   "className": "8K",
+   "contact": "",
+   "name": "MOHAMMED ABDULLAH M ALFAIFI"
+  },
+  "S220450": {
+   "className": "8F",
+   "contact": "",
+   "name": "Sulaiman Sabahat Khan"
+  },
+  "S220483": {
+   "className": "8L",
+   "contact": "",
+   "name": "Ahmed abdulrhman Aqeel ALkhteeb"
+  },
+  "S220511": {
+   "className": "8K",
+   "contact": "",
+   "name": "Ahmed Abbas Mohammed Mohammed Ahmed"
+  },
+  "S220610": {
+   "className": "8B",
+   "contact": "",
+   "name": "Tariq Mohamed Saadeldin Sharara"
+  },
+  "S220634": {
+   "className": "8L",
+   "contact": "",
+   "name": "Hozifa Ahmed Hassan"
+  },
+  "S220663": {
+   "className": "8G",
+   "contact": "",
+   "name": "BARA'A MALEK ALI ABUAMOUD"
+  },
+  "S220869": {
+   "className": "8F",
+   "contact": "",
+   "name": "Muhammad Asadullah Muhammad"
+  },
+  "S220895": {
+   "className": "8F",
+   "contact": "",
+   "name": "Albaraa Mostafa Mohammed Shawky Elsayed Abdelghafar"
+  },
+  "S220898": {
+   "className": "8F",
+   "contact": "",
+   "name": "YIXUAN MA"
+  },
+  "S220906": {
+   "className": "8H",
+   "contact": "",
+   "name": "Abdullah Fahad Al Kulayb"
+  },
+  "S221060": {
+   "className": "8C",
+   "contact": "",
+   "name": "NOUR ELDIN MOHAMED YOSRY ALY"
+  },
+  "S221348": {
+   "className": "8K",
+   "contact": "",
+   "name": "Omar Ahmed Abdelaal"
+  },
+  "S221658": {
+   "className": "8J",
+   "contact": "",
+   "name": "Yazan Mohammed Alqahtani"
+  },
+  "S221703": {
+   "className": "8L",
+   "contact": "",
+   "name": "Eyad Ayman Abdelsalam Abdallah"
+  },
+  "S221721": {
+   "className": "8L",
+   "contact": "",
+   "name": "Omar Emad Khedr Abdalla Abdelwareth"
+  },
+  "S221819": {
+   "className": "8K",
+   "contact": "",
+   "name": "Abdulmalik Abdullah S Alfaifi"
+  },
+  "S221906": {
+   "className": "8I",
+   "contact": "",
+   "name": "Bader Ahmed Juaythin"
+  },
+  "S221931": {
+   "className": "8L",
+   "contact": "",
+   "name": "Fayez Mohammad Anas Alfarra"
+  },
+  "S221966": {
+   "className": "8I",
+   "contact": "",
+   "name": "Jaafer Mohamed Nurhussin"
+  },
+  "S222006": {
+   "className": "8K",
+   "contact": "",
+   "name": "Eyad Ibrahim Ahmed Sabry"
+  },
+  "S222087": {
+   "className": "8J",
+   "contact": "",
+   "name": "Ziad Mahmoud Sayed Ali"
+  },
+  "S222093": {
+   "className": "8I",
+   "contact": "",
+   "name": "Abdelrahman Wail Abdelrahman Elarif"
+  },
+  "S222124": {
+   "className": "8L",
+   "contact": "",
+   "name": "Aser Wael Mahfouz Elhanfi mohamed"
+  },
+  "S222145": {
+   "className": "8F",
+   "contact": "",
+   "name": "Muhammad Bin Shoaib Shah"
+  },
+  "S222253": {
+   "className": "8F",
+   "contact": "",
+   "name": "Leman Adil Saleh"
+  },
+  "S222347": {
+   "className": "8G",
+   "contact": "",
+   "name": "SAMER GHAVAR ALRAHHAL"
+  },
+  "S240038": {
+   "className": "8C",
+   "contact": "",
+   "name": "Faisal Fahed Habib"
+  },
+  "S240266": {
+   "className": "8E",
+   "contact": "",
+   "name": "TAQI ABDULQADER ABDULHAMEED MOHAMMED"
+  },
+  "S240291": {
+   "className": "8L",
+   "contact": "",
+   "name": "Omar Hamed A Alwusaydi"
+  },
+  "S240351": {
+   "className": "8F",
+   "contact": "",
+   "name": "RIDHWAN KAMALUDEEN M. MOHAMED"
+  },
+  "S240581": {
+   "className": "8L",
+   "contact": "",
+   "name": "Zaid Mohammed Alsemiran"
+  },
+  "S240607": {
+   "className": "8L",
+   "contact": "",
+   "name": "Rayan Salam Abu Saleh"
+  },
+  "S240620": {
+   "className": "8F",
+   "contact": "",
+   "name": "Azlaan Osama Khurshid"
+  },
+  "S240624": {
+   "className": "8E",
+   "contact": "",
+   "name": "Abdullah Hayat"
+  },
+  "S240652": {
+   "className": "8I",
+   "contact": "",
+   "name": "MOBARAK FAHAD A ALOTAIBI"
+  },
+  "S240665": {
+   "className": "8F",
+   "contact": "",
+   "name": "Ayman Abdus Saboor Butt"
+  },
+  "S240686": {
+   "className": "8F",
+   "contact": "",
+   "name": "MOHAMMED ALI TAREEN"
+  },
+  "S240691": {
+   "className": "8I",
+   "contact": "",
+   "name": "Qusai Haytham LI Alghamdi"
+  },
+  "S240755": {
+   "className": "8L",
+   "contact": "",
+   "name": "YOUSEF ABDULAZIZ BADAWI"
+  },
+  "S240803": {
+   "className": "8F",
+   "contact": "",
+   "name": "Mohammed Ahyan Ali"
+  },
+  "S250055": {
+   "className": "8F",
+   "contact": "",
+   "name": "Muhammed Tariq Ali Ahmed"
+  },
+  "S250211": {
+   "className": "8C",
+   "contact": "",
+   "name": "Khalil Mohammed Abuteir"
+  },
+  "S250252": {
+   "className": "8G",
+   "contact": "",
+   "name": "Mohamed Elfatih Mohamed Musa"
+  },
+  "S250289": {
+   "className": "8E",
+   "contact": "",
+   "name": "Shazil Adeel"
+  },
+  "S250295": {
+   "className": "8K",
+   "contact": "",
+   "name": "Mustafa Imadeldin Hussein Elfaki"
+  },
+  "S250333": {
+   "className": "8E",
+   "contact": "",
+   "name": "Abdallah Youssif El Khayat"
+  },
+  "S250370": {
+   "className": "8F",
+   "contact": "",
+   "name": "Abdur-Rahmaan Esakjee"
+  },
+  "S250377": {
+   "className": "8F",
+   "contact": "",
+   "name": "Salmaan Ibn Mutah Beale"
+  },
+  "S250469": {
+   "className": "8H",
+   "contact": "",
+   "name": "Hasan Faisal Hasan Abuhasna"
+  },
+  "S250490": {
+   "className": "8L",
+   "contact": "",
+   "name": "Yasser Khalid A Alturki"
+  },
+  "S250544": {
+   "className": "8A",
+   "contact": "",
+   "name": "Zaeem Shahid"
+  },
+  "S250577": {
+   "className": "8H",
+   "contact": "",
+   "name": "Nasser Abdulrahman N Alghamdi"
+  },
+  "S250595": {
+   "className": "8C",
+   "contact": "",
+   "name": "Yousef Hossam Abdullah Ali"
+  },
+  "S250614": {
+   "className": "8C",
+   "contact": "",
+   "name": "Sohaib Mohamed Fathy Elsayed Ibrahim Ewiss"
+  },
+  "S250648": {
+   "className": "8E",
+   "contact": "",
+   "name": "Abdulrazak Mustafa Ahmed"
+  },
+  "S250667": {
+   "className": "8J",
+   "contact": "",
+   "name": "Faisal Marwan Diar Bakrli"
+  },
+  "S250729": {
+   "className": "8L",
+   "contact": "",
+   "name": "Fahmi Marwan Fahmi Kiswani"
+  },
+  "S250735": {
+   "className": "8E",
+   "contact": "",
+   "name": "Yahya Affan Usmani"
+  },
+  "S250741": {
+   "className": "8J",
+   "contact": "",
+   "name": "Hamza Ahmed Farouk Omar Hassan"
+  },
+  "S250780": {
+   "className": "8K",
+   "contact": "",
+   "name": "Fahad Zaid I AlFaraj"
+  },
+  "S250847": {
+   "className": "8L",
+   "contact": "",
+   "name": "Eyad Hashem E. Al-Muhtadi"
+  },
+  "S260046": {
+   "className": "8G",
+   "contact": "",
+   "name": "Yousuf Mahmud Sulieman Mohammed"
+  },
+  "S260065": {
+   "className": "8H",
+   "contact": "",
+   "name": "Youssef Mohamed Abdalla Abdelfattah Abdelrahman"
+  },
+  "S260169": {
+   "className": "8A",
+   "contact": "",
+   "name": "Shaheer Omer Khan"
+  },
+  "S260174": {
+   "className": "8E",
+   "contact": "",
+   "name": "Muhammad Sanan Inayatulllah Saim"
+  },
+  "S260190": {
+   "className": "8L",
+   "contact": "",
+   "name": "Hamza Khaled Mohamed Amin"
+  },
+  "S260198": {
+   "className": "8G",
+   "contact": "",
+   "name": "Omar Ahmed Ezzat Elsayed"
+  },
+  "S260227": {
+   "className": "8E",
+   "contact": "",
+   "name": "Abdullah Ahmed"
+  },
+  "S260230": {
+   "className": "8G",
+   "contact": "",
+   "name": "Omar Hisham Elsayed Marey"
+  },
+  "S260240": {
+   "className": "8K",
+   "contact": "",
+   "name": "omar mohamed ALI Aboraia"
+  },
+  "S260322": {
+   "className": "8E",
+   "contact": "",
+   "name": "Shaheer Muhammad"
+  },
+  "S260340": {
+   "className": "8F",
+   "contact": "",
+   "name": "Abubakr Mohamed Abdelaal Rayis"
+  },
+  "S260415": {
+   "className": "8H",
+   "contact": "",
+   "name": "Jawad Hazem Mohamed Ahmed Badr"
+  },
+  "S260420": {
+   "className": "8L",
+   "contact": "",
+   "name": "Mohamad Hadi Abusaleh"
+  },
+  "S260461": {
+   "className": "8G",
+   "contact": "",
+   "name": "Fahad Majed Abdullah Alarifi"
+  },
+  "S260462": {
+   "className": "8G",
+   "contact": "",
+   "name": "Faisal Majed Abdullah Alarifi"
+  },
+  "S260489": {
+   "className": "8A",
+   "contact": "",
+   "name": "Muhammad Omar"
+  },
+  "S260549": {
+   "className": "8F",
+   "contact": "",
+   "name": "ZAID RIZWAN SHAFIULLAH KHAN"
+  },
+  "S260553": {
+   "className": "8E",
+   "contact": "",
+   "name": "Adam Naameh"
+  },
+  "S260562": {
+   "className": "8E",
+   "contact": "",
+   "name": "KyungRok Yoo"
+  },
+  "S260603": {
+   "className": "8J",
+   "contact": "",
+   "name": "Ali Elfayad Hamad Abdelmoniem"
+  },
+  "S260612": {
+   "className": "8F",
+   "contact": "",
+   "name": "Muhammad Hamza"
+  },
+  "S260667": {
+   "className": "8F",
+   "contact": "",
+   "name": "Basim Abbasi"
+  },
+  "S260729": {
+   "className": "8E",
+   "contact": "",
+   "name": "Abdullah Ali Tanveer Butt"
+  },
+  "S260739": {
+   "className": "8I",
+   "contact": "",
+   "name": "Sultan Khalid Abdullah Aletai"
+  },
+  "S260764": {
+   "className": "8K",
+   "contact": "",
+   "name": "Hasan Mahmoud Abdulkader Hawilo"
+  },
+  "S260773": {
+   "className": "8E",
+   "contact": "",
+   "name": "Shaqeeq Ur Rahman"
+  },
+  "S260776": {
+   "className": "8F",
+   "contact": "",
+   "name": "Syed Rayyan Mukaram"
+  },
+  "S260838": {
+   "className": "8E",
+   "contact": "",
+   "name": "Muhammad bin Ather"
+  }
+ },
+ "staff": {
+  "E4965": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E4965",
+   "email": "s.hussaini@ais.sch.sa",
+   "name": "Syed Tauseef Hussaini",
+   "pin": "E4965",
+   "role": "teacher",
+   "subjects": [
+    "CCP"
+   ]
+  },
+  "E4982": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E4982",
+   "email": "ma.alansary@ais.sch.sa",
+   "name": "Mohammed Abdullah Al-Haj",
+   "pin": "E4982",
+   "role": "teacher",
+   "subjects": [
+    "Islamic Studies"
+   ]
+  },
+  "E4986": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E4986",
+   "email": "a.alshahat@ais.sch.sa",
+   "name": "Ahmed Mahmoud Amin El-Shahat",
+   "pin": "E4986",
+   "role": "teacher",
+   "subjects": [
+    "Physical Education"
+   ]
+  },
+  "E4987": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E4987",
+   "email": "m.aboukhadra@ais.sch.sa",
+   "name": "Mohammed Jamal Abu Khadra",
+   "pin": "E4987",
+   "role": "teacher",
+   "subjects": [
+    "Mathematics"
+   ]
+  },
+  "E5036": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5036",
+   "email": "r.anwar@ais.sch.sa",
+   "name": "Raiyan Anwar",
+   "pin": "E5036",
+   "role": "teacher",
+   "subjects": [
+    "CCP"
+   ]
+  },
+  "E5053": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5053",
+   "email": "s.shaheen@ais.sch.sa",
+   "name": "Saeed Abdelmoez Mohammed Shaheen",
+   "pin": "E5053",
+   "role": "teacher",
+   "subjects": [
+    "Physical Education"
+   ]
+  },
+  "E5072": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5072",
+   "email": "a.nasser@ais.sch.sa",
+   "name": "Abdulrahman Nasser Abdullah",
+   "pin": "E5072",
+   "role": "teacher",
+   "subjects": [
+    "Social Studies"
+   ]
+  },
+  "E5092": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5092",
+   "email": "m.qarqaz@ais.sch.sa",
+   "name": "Mohammed Hamdi Abdulrahman Qaraqaz",
+   "pin": "E5092",
+   "role": "teacher",
+   "subjects": [
+    "English"
+   ]
+  },
+  "E5102": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5102",
+   "email": "a.aldhfeeri@ais.sch.sa",
+   "name": "Athbi Mubarrad Al-Dhafiri",
+   "pin": "E5102",
+   "role": "teacher",
+   "subjects": [
+    "Arabic"
+   ]
+  },
+  "E5104": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5104",
+   "email": "m.shah@ais.sch.sa",
+   "name": "Mohammed Aslam Shah",
+   "pin": "E5104",
+   "role": "teacher",
+   "subjects": [
+    "Computer Science"
+   ]
+  },
+  "E5108": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5108",
+   "email": "m.emara@ais.sch.sa",
+   "name": "Mahmoud Hassan El-Sayed Emara",
+   "pin": "E5108",
+   "role": "teacher",
+   "subjects": [
+    "Arabic"
+   ]
+  },
+  "E5109": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5109",
+   "email": "t.zohiry@ais.sch.sa",
+   "name": "Tarek Shehata Zuhairi",
+   "pin": "E5109",
+   "role": "teacher",
+   "subjects": [
+    "Arabic"
+   ]
+  },
+  "E5124": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5124",
+   "email": "m.ibrahim@ais.sch.sa",
+   "name": "Mohammed Abdullah Ibrahim",
+   "pin": "E5124",
+   "role": "teacher",
+   "subjects": [
+    "Mathematics"
+   ]
+  },
+  "E5130": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5130",
+   "email": "a.shalan@ais.sch.sa",
+   "name": "Ahmed Salem Abdulaziz Shaalan",
+   "pin": "E5130",
+   "role": "teacher",
+   "subjects": [
+    "Biology"
+   ]
+  },
+  "E5133": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5133",
+   "email": "a.aleyadi@ais.sch.sa",
+   "name": "Abdulrahman Adel Al-Ayadi",
+   "pin": "E5133",
+   "role": "teacher",
+   "subjects": [
+    "Social Studies"
+   ]
+  },
+  "E5139": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5139",
+   "email": "a.alansary@ais.sch.sa",
+   "name": "Abdullah Abdulrahman Al-Ansari",
+   "pin": "E5139",
+   "role": "teacher",
+   "subjects": [
+    "Islamic Studies"
+   ]
+  },
+  "E5153": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5153",
+   "email": "a.abubaker@ais.sch.sa",
+   "name": "Abdulhamid Abubakar Ali",
+   "pin": "E5153",
+   "role": "teacher",
+   "subjects": [
+    "Islamic Studies"
+   ]
+  },
+  "E5175": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5175",
+   "email": "sadiqullah.s@ais.sch.sa",
+   "name": "Sadiqullah Sharif",
+   "pin": "E5175",
+   "role": "teacher",
+   "subjects": [
+    "Business Administration & English"
+   ]
+  },
+  "E5183": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5183",
+   "email": "mouley.m@ais.sch.sa",
+   "name": "Moulay Mohammed Belhaj Mohammed",
+   "pin": "E5183",
+   "role": "teacher",
+   "subjects": [
+    "Mathematics"
+   ]
+  },
+  "E5200": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5200",
+   "email": "abdulraheem.k@ais.sch.sa",
+   "name": "Abdulrahim Kabir Ahmed Abdulghani",
+   "pin": "E5200",
+   "role": "teacher",
+   "subjects": [
+    "Islamic Studies"
+   ]
+  },
+  "E5214": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5214",
+   "email": "i.darwish@ais.sch.sa",
+   "name": "Ibrahim Mahmoud Darwish",
+   "pin": "E5214",
+   "role": "teacher",
+   "subjects": [
+    "Science"
+   ]
+  },
+  "E5218": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5218",
+   "email": "a.hassanain@ais.sch.sa",
+   "name": "Amr Hassanein",
+   "pin": "E5218",
+   "role": "teacher",
+   "subjects": [
+    "English"
+   ]
+  },
+  "E5225": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5225",
+   "email": "abul.hassan@ais.sch.sa",
+   "name": "Hanan Abulhassan",
+   "pin": "E5225",
+   "role": "teacher",
+   "subjects": [
+    "English"
+   ]
+  },
+  "E5226": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5226",
+   "email": "e.fathy@ais.sch.sa",
+   "name": "Ehab Fathy Ismail",
+   "pin": "E5226",
+   "role": "teacher",
+   "subjects": [
+    "Mathematics"
+   ]
+  },
+  "E5663": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5663",
+   "email": "m.shaleem@ais.sch.sa",
+   "name": "Musa Shaleem Mohammed",
+   "pin": "E5663",
+   "role": "teacher",
+   "subjects": [
+    "Islamic Studies (English)"
+   ]
+  },
+  "E5704": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5704",
+   "email": "s.rehmat@ais.sch.sa",
+   "name": "Saeed Ahmed Rahmat",
+   "pin": "E5704",
+   "role": "teacher",
+   "subjects": [
+    "English"
+   ]
+  },
+  "E5749": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5749",
+   "email": "a.abdulrahman@ais.sch.sa",
+   "name": "Ahmed Ali Abdulrahman Ali",
+   "pin": "E5749",
+   "role": "teacher",
+   "subjects": [
+    "English"
+   ]
+  },
+  "E5751": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5751",
+   "email": "abdurrahman.h@ais.sch.sa",
+   "name": "Abdulrahman Hassan Hanafi Ragab",
+   "pin": "E5751",
+   "role": "teacher",
+   "subjects": [
+    "Science"
+   ]
+  },
+  "E5753": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5753",
+   "email": "khaled.y@ais.sch.sa",
+   "name": "Khaled Yousry Othman Ramadan",
+   "pin": "E5753",
+   "role": "teacher",
+   "subjects": [
+    "Science"
+   ]
+  },
+  "E5811": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5811",
+   "email": "i.shafi@ais.sch.sa",
+   "name": "Izhar Shafi",
+   "pin": "E5811",
+   "role": "teacher",
+   "subjects": [
+    "CCP"
+   ]
+  },
+  "E5830": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5830",
+   "email": "m.mohyeldin@ais.sch.sa",
+   "name": "Mohamed El-Dardery Mohyeldin",
+   "pin": "E5830",
+   "role": "teacher",
+   "subjects": [
+    "Mathematics"
+   ]
+  },
+  "E5856": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5856",
+   "email": "a.aldosari@ais.sch.sa",
+   "name": "Abdulaziz Khaled Atiq Al-Dosari",
+   "pin": "E5856",
+   "role": "teacher",
+   "subjects": [
+    "Islamic Studies"
+   ]
+  },
+  "E5950": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5950",
+   "email": "w.abdelrahim@ais.sch.sa",
+   "name": "Wael Abdulqader Muflih Abdulrahim",
+   "pin": "E5950",
+   "role": "teacher",
+   "subjects": [
+    "Computer Science"
+   ]
+  },
+  "E5956": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5956",
+   "email": "s.gillani@ais.sch.sa",
+   "name": "Saeed Hassan Ali Gilani",
+   "pin": "E5956",
+   "role": "teacher",
+   "subjects": [
+    "Mathematics"
+   ]
+  },
+  "E5961": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5961",
+   "email": "a.shehata@ais.sch.sa",
+   "name": "Ahmed Salah Mahran Shehata",
+   "pin": "E5961",
+   "role": "teacher",
+   "subjects": [
+    "Mathematics"
+   ]
+  },
+  "E5982": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E5982",
+   "email": "m.abdulmateen@ais.sch.sa",
+   "name": "Mohammed Abdul Mateen",
+   "pin": "E5982",
+   "role": "teacher",
+   "subjects": [
+    "CCP"
+   ]
+  },
+  "E6029": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6029",
+   "email": "m.elafandy@ais.sch.sa",
+   "name": "Mohammed Hussein Taha Al-Effendi",
+   "pin": "E6029",
+   "role": "teacher",
+   "subjects": [
+    "Mathematics"
+   ]
+  },
+  "E6030": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6030",
+   "email": "k.salama@ais.sch.sa",
+   "name": "Karim Jamil Salama",
+   "pin": "E6030",
+   "role": "teacher",
+   "subjects": [
+    "English"
+   ]
+  },
+  "E6031": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6031",
+   "email": "i.azouaoui@ais.sch.sa",
+   "name": "Ehab Ben Habib Al-Zawawi",
+   "pin": "E6031",
+   "role": "teacher",
+   "subjects": [
+    "English"
+   ]
+  },
+  "E6034": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6034",
+   "email": "i.alsanad@ais.sch.sa",
+   "name": "Ibrahim Abdullah Mohammed Al-Sanad",
+   "pin": "E6034",
+   "role": "teacher",
+   "subjects": [
+    "Islamic Studies"
+   ]
+  },
+  "E6035": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6035",
+   "email": "a.barakat@ais.sch.sa",
+   "name": "Ahmed Fathy Barakat",
+   "pin": "E6035",
+   "role": "teacher",
+   "subjects": [
+    "English"
+   ]
+  },
+  "E6037": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6037",
+   "email": "m.salama@ais.sch.sa",
+   "name": "Mahmoud Ibrahim Hussein Salama",
+   "pin": "E6037",
+   "role": "teacher",
+   "subjects": [
+    "English"
+   ]
+  },
+  "E6057": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6057",
+   "email": "rodwan.s@ais.sch.sa",
+   "name": "Radwan Suleiman Ali Ibrahim",
+   "pin": "E6057",
+   "role": "teacher",
+   "subjects": [
+    "Chemistry"
+   ]
+  },
+  "E6069": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6069",
+   "email": "mohamed.ahmed@ais.sch.sa",
+   "name": "Mohammed Ahmed Mohammed Abdulkhaleq",
+   "pin": "E6069",
+   "role": "teacher",
+   "subjects": [
+    "Physics"
+   ]
+  },
+  "E6070": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6070",
+   "email": "m.saloma@ais.sch.sa",
+   "name": "Mohammed Ashraf Salouma",
+   "pin": "E6070",
+   "role": "teacher",
+   "subjects": [
+    "Chemistry"
+   ]
+  },
+  "E6071": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6071",
+   "email": "a.belloibiyemi@ais.sch.sa",
+   "name": "Abdulraheem Bello Ibiyemi",
+   "pin": "E6071",
+   "role": "teacher",
+   "subjects": [
+    "Science"
+   ]
+  },
+  "E6085": {
+   "classes": [
+    "ALL"
+   ],
+   "eNumber": "E6085",
+   "email": "yasir.khan@ais.sch.sa",
+   "name": "Yasir Khan",
+   "pin": "E6085",
+   "role": "teacher",
+   "subjects": [
+    "Biology"
+   ]
+  },
+  "admin-1790420038098": {
+   "className": "",
+   "eNumber": "",
+   "email": "r.anwar@ais.sch.sa",
+   "name": "Raiyan Anwar",
+   "pin": "123@789",
+   "role": "admin",
+   "subject": ""
+  },
+  "staff-1790420838914": {
+   "className": "8C",
+   "eNumber": "E20568",
+   "email": "r.anwar@ais.sch.sa",
+   "name": "Raiyan Anwar",
+   "pin": "123@789",
+   "role": "teacher",
+   "subject": "CCP"
+  }
+ },
+ "points": {
+  "S160018": {
+   "weeks": {}
+  },
+  "S160106": {
+   "weeks": {
+    "2026-09-20": {
+     "deductions": [
+      {
+       "category": "Respectful",
+       "date": "2026-09-26",
+       "note": "talking over teacher explanation repeteadely.",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:02:28.144Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-26",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:02:45.279Z"
+      }
+     ],
+     "total": 95
+    },
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-27",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:16.780Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-27",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:20.190Z"
+      },
+      {
+       "date": "2026-09-27",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:21.824Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S160187": {
+   "weeks": {}
+  },
+  "S160216": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "💬",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T20:06:03.757Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S160226": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:11.832Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Islamic Studies",
+       "teacherId": "E5153",
+       "teacherName": "Abdulhamid Abubakar Ali",
+       "time": "2026-09-28T04:29:18.075Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S160268": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "English",
+       "teacherId": "E5704",
+       "teacherName": "Saeed Ahmed Rahmat",
+       "time": "2026-09-28T03:54:57.882Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "English",
+       "teacherId": "E5704",
+       "teacherName": "Saeed Ahmed Rahmat",
+       "time": "2026-09-28T03:54:58.971Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "💬",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T20:06:23.358Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T20:06:25.413Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S160313": {
+   "weeks": {}
+  },
+  "S160411": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "Fighting!",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T03:52:54.641Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S160443": {
+   "weeks": {}
+  },
+  "S160489": {
+   "weeks": {}
+  },
+  "S160561": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T19:33:37.192Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T19:33:21.545Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T19:33:25.217Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S160686": {
+   "weeks": {}
+  },
+  "S160712": {
+   "weeks": {}
+  },
+  "S160831": {
+   "weeks": {}
+  },
+  "S160960": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Chemistry",
+       "teacherId": "E6070",
+       "teacherName": "Mohammed Ashraf Salouma",
+       "time": "2026-09-28T04:27:42.581Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Computer Science",
+       "teacherId": "E5104",
+       "teacherName": "Mohammed Aslam Shah",
+       "time": "2026-09-28T04:28:30.043Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:03.793Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S160969": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T03:52:29.578Z"
+      }
+     ],
+     "resetLog": [
+      {
+       "at": "2026-09-30T07:03:58.168Z",
+       "by": "Admin",
+       "byId": "master-admin",
+       "previousTotal": 90,
+       "removed": [
+        {
+         "category": "Ready",
+         "date": "2026-09-28",
+         "note": "still talking with no pen and paper!",
+         "subject": "CCP",
+         "teacherId": "E5036",
+         "teacherName": "Raiyan Anwar",
+         "time": "2026-09-28T03:52:13.307Z"
+        },
+        {
+         "category": "Ready",
+         "date": "2026-09-28",
+         "note": "NOt ready with pen and paper after multiple reminders every period",
+         "subject": "English",
+         "teacherId": "E5704",
+         "teacherName": "Saeed Ahmed Rahmat",
+         "time": "2026-09-28T03:54:20.256Z"
+        }
+       ]
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S161071": {
+   "weeks": {}
+  },
+  "S161104": {
+   "weeks": {}
+  },
+  "S161113": {
+   "weeks": {}
+  },
+  "S161119": {
+   "weeks": {}
+  },
+  "S161149": {
+   "weeks": {}
+  },
+  "S161201": {
+   "weeks": {}
+  },
+  "S161204": {
+   "weeks": {}
+  },
+  "S161263": {
+   "weeks": {}
+  },
+  "S170008": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "Swearing across the room",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:56:40.807Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S170009": {
+   "weeks": {}
+  },
+  "S170010": {
+   "weeks": {}
+  },
+  "S170025": {
+   "weeks": {}
+  },
+  "S170038": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "walking out of the room",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:43.311Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Islamic Studies",
+       "teacherId": "E5153",
+       "teacherName": "Abdulhamid Abubakar Ali",
+       "time": "2026-09-28T04:29:27.592Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S170069": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "Walking out of the room without permission.",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T03:52:32.597Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "English",
+       "teacherId": "E5704",
+       "teacherName": "Saeed Ahmed Rahmat",
+       "time": "2026-09-28T03:54:43.226Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "Fighting",
+       "subject": "English",
+       "teacherId": "E5704",
+       "teacherName": "Saeed Ahmed Rahmat",
+       "time": "2026-09-28T03:54:51.584Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "fighting with Ahmad after multiple reminders to stop and measures.",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:56:10.915Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T03:52:36.470Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T03:52:38.833Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T20:06:49.521Z"
+      }
+     ],
+     "total": 80
+    }
+   }
+  },
+  "S170070": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T10:07:24.065Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T10:07:40.095Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S170071": {
+   "weeks": {}
+  },
+  "S170074": {
+   "weeks": {}
+  },
+  "S170075": {
+   "weeks": {}
+  },
+  "S170092": {
+   "weeks": {}
+  },
+  "S170119": {
+   "weeks": {}
+  },
+  "S170186": {
+   "weeks": {}
+  },
+  "S170249": {
+   "weeks": {}
+  },
+  "S170288": {
+   "weeks": {}
+  },
+  "S170326": {
+   "weeks": {}
+  },
+  "S170511": {
+   "weeks": {}
+  },
+  "S170521": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "swearing across the room",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:21.579Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Computer Science",
+       "teacherId": "E5104",
+       "teacherName": "Mohammed Aslam Shah",
+       "time": "2026-09-28T04:28:32.001Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:16.743Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:18:11.583Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "Islamic Studies",
+       "teacherId": "E5153",
+       "teacherName": "Abdulhamid Abubakar Ali",
+       "time": "2026-09-28T04:29:38.676Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S170528": {
+   "weeks": {}
+  },
+  "S170529": {
+   "weeks": {}
+  },
+  "S170548": {
+   "weeks": {}
+  },
+  "S170551": {
+   "weeks": {}
+  },
+  "S170581": {
+   "weeks": {}
+  },
+  "S170602": {
+   "weeks": {}
+  },
+  "S170624": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:37.915Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:40.095Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:44.915Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S170653": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Respectful",
+       "date": "2026-09-29",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T21:13:05.682Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-29",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T21:13:19.998Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S170670": {
+   "weeks": {}
+  },
+  "S170686": {
+   "weeks": {}
+  },
+  "S170694": {
+   "weeks": {}
+  },
+  "S170700": {
+   "weeks": {}
+  },
+  "S170765": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:56:59.910Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Chemistry",
+       "teacherId": "E6070",
+       "teacherName": "Mohammed Ashraf Salouma",
+       "time": "2026-09-28T04:27:07.282Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Chemistry",
+       "teacherId": "E6070",
+       "teacherName": "Mohammed Ashraf Salouma",
+       "time": "2026-09-28T04:27:13.057Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Computer Science",
+       "teacherId": "E5104",
+       "teacherName": "Mohammed Aslam Shah",
+       "time": "2026-09-28T04:28:28.384Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "English",
+       "teacherId": "E5092",
+       "teacherName": "Mohammed Hamdi Abdulrahman Qaraqaz",
+       "time": "2026-09-28T04:29:01.791Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Islamic Studies",
+       "teacherId": "E5153",
+       "teacherName": "Abdulhamid Abubakar Ali",
+       "time": "2026-09-28T04:29:29.932Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Islamic Studies",
+       "teacherId": "E5153",
+       "teacherName": "Abdulhamid Abubakar Ali",
+       "time": "2026-09-28T04:29:34.913Z"
+      }
+     ],
+     "total": 65
+    }
+   }
+  },
+  "S170776": {
+   "weeks": {}
+  },
+  "S170788": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:56:56.993Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:56:58.463Z"
+      },
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "outside the class for 10 mins!",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:17:49.171Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Chemistry",
+       "teacherId": "E6070",
+       "teacherName": "Mohammed Ashraf Salouma",
+       "time": "2026-09-28T04:27:04.849Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Computer Science",
+       "teacherId": "E5104",
+       "teacherName": "Mohammed Aslam Shah",
+       "time": "2026-09-28T04:28:24.398Z"
+      },
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Islamic Studies",
+       "teacherId": "E5153",
+       "teacherName": "Abdulhamid Abubakar Ali",
+       "time": "2026-09-28T04:29:32.143Z"
+      }
+     ],
+     "total": 70
+    }
+   }
+  },
+  "S170831": {
+   "weeks": {}
+  },
+  "S170843": {
+   "weeks": {}
+  },
+  "S170883": {
+   "weeks": {}
+  },
+  "S170936": {
+   "weeks": {
+    "2026-09-20": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-26",
+       "note": "fighting in class",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:01:32.269Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S170953": {
+   "weeks": {}
+  },
+  "S170973": {
+   "weeks": {}
+  },
+  "S170981": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:49.317Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:50.028Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S170985": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:09.415Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "fighting with Rayan",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:28.994Z"
+      },
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Computer Science",
+       "teacherId": "E5104",
+       "teacherName": "Mohammed Aslam Shah",
+       "time": "2026-09-28T04:28:36.166Z"
+      }
+     ],
+     "total": 85
+    }
+   }
+  },
+  "S170986": {
+   "weeks": {
+    "2026-09-20": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-26",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:01:50.075Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S171069": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "fighting on the floor",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:52.683Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Islamic Studies",
+       "teacherId": "E5153",
+       "teacherName": "Abdulhamid Abubakar Ali",
+       "time": "2026-09-28T04:29:24.804Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S171266": {
+   "weeks": {}
+  },
+  "S171285": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "Islamic Studies",
+       "teacherId": "E5856",
+       "teacherName": "Abdulaziz Khaled Atiq Al-Dosari",
+       "time": "2026-09-28T09:52:53.568Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "Islamic Studies",
+       "teacherId": "E5856",
+       "teacherName": "Abdulaziz Khaled Atiq Al-Dosari",
+       "time": "2026-09-28T09:52:55.132Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S171290": {
+   "weeks": {}
+  },
+  "S180008": {
+   "weeks": {}
+  },
+  "S180024": {
+   "weeks": {
+    "2026-09-20": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-26",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:01:23.256Z"
+      }
+     ],
+     "total": 100
+    },
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-27",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:37.882Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-27",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:40.708Z"
+      },
+      {
+       "category": "Ready",
+       "date": "2026-09-27",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:42.640Z"
+      },
+      {
+       "category": "Ready",
+       "date": "2026-09-29",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-29T18:46:47.261Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-29",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-29T18:46:49.018Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-29",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-29T18:47:03.269Z"
+      }
+     ],
+     "total": 70
+    }
+   }
+  },
+  "S180029": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "Islamic Studies",
+       "teacherId": "E5856",
+       "teacherName": "Abdulaziz Khaled Atiq Al-Dosari",
+       "time": "2026-09-28T09:53:03.713Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S180037": {
+   "weeks": {}
+  },
+  "S180075": {
+   "weeks": {}
+  },
+  "S180086": {
+   "weeks": {}
+  },
+  "S180098": {
+   "weeks": {}
+  },
+  "S180119": {
+   "weeks": {}
+  },
+  "S180157": {
+   "weeks": {}
+  },
+  "S180162": {
+   "weeks": {}
+  },
+  "S180246": {
+   "weeks": {}
+  },
+  "S180337": {
+   "weeks": {}
+  },
+  "S180338": {
+   "weeks": {}
+  },
+  "S180339": {
+   "weeks": {}
+  },
+  "S180377": {
+   "weeks": {}
+  },
+  "S180387": {
+   "weeks": {}
+  },
+  "S180443": {
+   "weeks": {}
+  },
+  "S180497": {
+   "weeks": {}
+  },
+  "S180518": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:34.018Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S180580": {
+   "weeks": {}
+  },
+  "S180595": {
+   "weeks": {}
+  },
+  "S180607": {
+   "weeks": {}
+  },
+  "S180625": {
+   "weeks": {}
+  },
+  "S180690": {
+   "weeks": {}
+  },
+  "S180717": {
+   "weeks": {}
+  },
+  "S180719": {
+   "weeks": {}
+  },
+  "S180727": {
+   "weeks": {}
+  },
+  "S180748": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Business Administration & English",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-28T20:20:17.990Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:36.552Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:38.596Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "Business Administration & English",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-28T20:20:33.849Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S180805": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-29",
+       "note": "Talking non stop",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-29T04:59:12.739Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-29",
+       "emoji": "🔧",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-29T04:59:40.335Z"
+      },
+      {
+       "date": "2026-09-29",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-29T04:59:47.240Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S180897": {
+   "weeks": {}
+  },
+  "S180995": {
+   "weeks": {}
+  },
+  "S181038": {
+   "weeks": {}
+  },
+  "S190029": {
+   "weeks": {}
+  },
+  "S190034": {
+   "weeks": {}
+  },
+  "S190046": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T19:32:40.389Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T19:32:47.912Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S190050": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:05.922Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:07.346Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Computer Science",
+       "teacherId": "E5104",
+       "teacherName": "Mohammed Aslam Shah",
+       "time": "2026-09-28T04:28:33.685Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-29",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-29T05:00:04.058Z"
+      }
+     ],
+     "total": 85
+    }
+   }
+  },
+  "S190083": {
+   "weeks": {}
+  },
+  "S190213": {
+   "weeks": {}
+  },
+  "S190334": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "resetLog": [
+      {
+       "at": "2026-09-30T07:03:48.094Z",
+       "by": "Admin",
+       "byId": "master-admin",
+       "previousTotal": 96,
+       "removed": [
+        {
+         "category": "Ready",
+         "date": "2026-09-28",
+         "note": "Talking non stop after many warnings",
+         "subject": "English",
+         "teacherId": "E5704",
+         "teacherName": "Saeed Ahmed Rahmat",
+         "time": "2026-09-28T03:54:05.087Z"
+        },
+        {
+         "category": "Admin Adjustment",
+         "date": "2026-09-28",
+         "manualTotalOverride": 96,
+         "note": "Manual total override",
+         "subject": "Admin",
+         "teacherId": "master-admin",
+         "teacherName": "Admin (admin)",
+         "time": "2026-09-28T04:24:46.297Z"
+        }
+       ]
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S190441": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:42.107Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:42.581Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:43.175Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S190471": {
+   "weeks": {}
+  },
+  "S190481": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-27",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-27T12:10:10.563Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-27",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-27T12:10:15.473Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-27",
+       "note": "Fighting\n",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-27T12:10:18.235Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-27",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-27T12:56:35.185Z"
+      }
+     ],
+     "total": 85
+    }
+   }
+  },
+  "S190539": {
+   "weeks": {}
+  },
+  "S190677": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:13.617Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Computer Science",
+       "teacherId": "E5104",
+       "teacherName": "Mohammed Aslam Shah",
+       "time": "2026-09-28T04:28:26.735Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:57:01.818Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S190713": {
+   "weeks": {}
+  },
+  "S190782": {
+   "weeks": {}
+  },
+  "S190799": {
+   "weeks": {}
+  },
+  "S190938": {
+   "weeks": {}
+  },
+  "S190949": {
+   "weeks": {}
+  },
+  "S190957": {
+   "weeks": {}
+  },
+  "S191183": {
+   "weeks": {}
+  },
+  "S200176": {
+   "weeks": {}
+  },
+  "S200204": {
+   "weeks": {}
+  },
+  "S200232": {
+   "weeks": {}
+  },
+  "S200299": {
+   "weeks": {}
+  },
+  "S200304": {
+   "weeks": {}
+  },
+  "S200339": {
+   "weeks": {
+    "2026-09-20": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-26",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:01:18.328Z"
+      },
+      {
+       "date": "2026-09-26",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:01:27.216Z"
+      }
+     ],
+     "total": 100
+    },
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-29",
+       "emoji": "🔧",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-29T18:47:10.497Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S200369": {
+   "weeks": {}
+  },
+  "S200508": {
+   "weeks": {}
+  },
+  "S210073": {
+   "weeks": {}
+  },
+  "S210128": {
+   "weeks": {}
+  },
+  "S210453": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "Arabic",
+       "teacherId": "E5108",
+       "teacherName": "Mahmoud Hassan El-Sayed Emara",
+       "time": "2026-09-28T03:56:34.451Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S210548": {
+   "weeks": {}
+  },
+  "S210560": {
+   "weeks": {}
+  },
+  "S210574": {
+   "weeks": {}
+  },
+  "S210808": {
+   "weeks": {}
+  },
+  "S210811": {
+   "weeks": {}
+  },
+  "S220070": {
+   "weeks": {
+    "2026-09-20": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-26",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T11:07:47.940Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-26",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:02:21.966Z"
+      }
+     ],
+     "total": 95
+    },
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-27",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:16:50.411Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-27",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:16:55.701Z"
+      },
+      {
+       "date": "2026-09-27",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:16:59.729Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S220073": {
+   "weeks": {}
+  },
+  "S220086": {
+   "weeks": {}
+  },
+  "S220091": {
+   "weeks": {}
+  },
+  "S220096": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:56.257Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:57.784Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S220132": {
+   "weeks": {}
+  },
+  "S220168": {
+   "weeks": {}
+  },
+  "S220321": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "still talking after many reminders\n",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:44:58.338Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S220384": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "fighting!",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:15.331Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S220385": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T19:39:13.282Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S220409": {
+   "weeks": {}
+  },
+  "S220450": {
+   "weeks": {}
+  },
+  "S220483": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:46:37.010Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S220511": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T19:32:59.648Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T19:33:01.509Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T19:33:09.142Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S220610": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "fighting and swearing!",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:18:26.360Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "Islamic Studies",
+       "teacherId": "E5153",
+       "teacherName": "Abdulhamid Abubakar Ali",
+       "time": "2026-09-28T04:29:20.553Z"
+      }
+     ],
+     "total": 90
+    }
+   }
+  },
+  "S220634": {
+   "weeks": {}
+  },
+  "S220663": {
+   "weeks": {}
+  },
+  "S220869": {
+   "weeks": {}
+  },
+  "S220895": {
+   "weeks": {}
+  },
+  "S220898": {
+   "weeks": {}
+  },
+  "S220906": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-29",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T21:12:32.398Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S221060": {
+   "weeks": {
+    "2026-09-20": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-26",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:01:58.437Z"
+      }
+     ],
+     "total": 100
+    },
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-27",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:25.466Z"
+      },
+      {
+       "date": "2026-09-27",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:26.080Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S221348": {
+   "weeks": {}
+  },
+  "S221658": {
+   "weeks": {}
+  },
+  "S221703": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:31.531Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S221721": {
+   "weeks": {}
+  },
+  "S221819": {
+   "weeks": {}
+  },
+  "S221906": {
+   "weeks": {}
+  },
+  "S221931": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:24.759Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S221966": {
+   "weeks": {}
+  },
+  "S222006": {
+   "weeks": {}
+  },
+  "S222087": {
+   "weeks": {}
+  },
+  "S222093": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:27.495Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "E5982",
+       "teacherName": "Mohammed Abdul Mateen",
+       "time": "2026-09-28T04:19:31.422Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S222124": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:35.801Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S222145": {
+   "weeks": {}
+  },
+  "S222253": {
+   "weeks": {}
+  },
+  "S222347": {
+   "weeks": {}
+  },
+  "S240038": {
+   "weeks": {
+    "2026-09-20": {
+     "deductions": [
+      {
+       "category": "Safe",
+       "date": "2026-09-26",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:01:04.381Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-26",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T16:02:25.405Z"
+      }
+     ],
+     "total": 95
+    },
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T20:32:28.972Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T10:39:29.446Z"
+      }
+     ],
+     "total": 95
+    }
+   }
+  },
+  "S240266": {
+   "weeks": {}
+  },
+  "S240291": {
+   "weeks": {}
+  },
+  "S240351": {
+   "weeks": {}
+  },
+  "S240581": {
+   "weeks": {}
+  },
+  "S240607": {
+   "weeks": {}
+  },
+  "S240620": {
+   "weeks": {}
+  },
+  "S240624": {
+   "weeks": {}
+  },
+  "S240652": {
+   "weeks": {}
+  },
+  "S240665": {
+   "weeks": {}
+  },
+  "S240686": {
+   "weeks": {}
+  },
+  "S240691": {
+   "weeks": {}
+  },
+  "S240755": {
+   "weeks": {}
+  },
+  "S240803": {
+   "weeks": {}
+  },
+  "S250055": {
+   "weeks": {}
+  },
+  "S250211": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-27",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:28.423Z"
+      },
+      {
+       "date": "2026-09-27",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-27T06:17:30.323Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S250252": {
+   "weeks": {}
+  },
+  "S250289": {
+   "weeks": {}
+  },
+  "S250295": {
+   "weeks": {}
+  },
+  "S250333": {
+   "weeks": {
+    "2026-09-20": {
+     "deductions": [
+      {
+       "category": "Respectful",
+       "date": "2026-09-26",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T11:08:07.696Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-26",
+       "note": "shouting abusive words to anothe student in class (Abdullah)",
+       "subject": "CCP",
+       "teacherId": "staff-1790420838914",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-26T11:08:10.489Z"
+      }
+     ],
+     "total": 90
+    },
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "Islamic Studies",
+       "teacherId": "E5856",
+       "teacherName": "Abdulaziz Khaled Atiq Al-Dosari",
+       "time": "2026-09-28T09:52:45.906Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "Islamic Studies",
+       "teacherId": "E5856",
+       "teacherName": "Abdulaziz Khaled Atiq Al-Dosari",
+       "time": "2026-09-28T09:52:46.186Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "Islamic Studies",
+       "teacherId": "E5856",
+       "teacherName": "Abdulaziz Khaled Atiq Al-Dosari",
+       "time": "2026-09-28T09:52:47.103Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🗣️",
+       "label": "Communication of Knowledge",
+       "subject": "Islamic Studies",
+       "teacherId": "E5856",
+       "teacherName": "Abdulaziz Khaled Atiq Al-Dosari",
+       "time": "2026-09-28T09:52:47.721Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S250370": {
+   "weeks": {}
+  },
+  "S250377": {
+   "weeks": {}
+  },
+  "S250469": {
+   "weeks": {}
+  },
+  "S250490": {
+   "weeks": {}
+  },
+  "S250544": {
+   "weeks": {}
+  },
+  "S250577": {
+   "weeks": {}
+  },
+  "S250595": {
+   "weeks": {}
+  },
+  "S250614": {
+   "weeks": {}
+  },
+  "S250648": {
+   "weeks": {}
+  },
+  "S250667": {
+   "weeks": {}
+  },
+  "S250729": {
+   "weeks": {}
+  },
+  "S250735": {
+   "weeks": {}
+  },
+  "S250741": {
+   "weeks": {}
+  },
+  "S250780": {
+   "weeks": {}
+  },
+  "S250847": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:43.844Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:49.477Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:50.655Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "E4965",
+       "teacherName": "Syed Tauseef Hussaini",
+       "time": "2026-09-28T09:45:53.167Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S260046": {
+   "weeks": {}
+  },
+  "S260065": {
+   "weeks": {}
+  },
+  "S260169": {
+   "weeks": {}
+  },
+  "S260174": {
+   "weeks": {}
+  },
+  "S260190": {
+   "weeks": {}
+  },
+  "S260198": {
+   "weeks": {}
+  },
+  "S260227": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [
+      {
+       "category": "Ready",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T10:41:06.643Z"
+      },
+      {
+       "category": "Respectful",
+       "date": "2026-09-28",
+       "note": "",
+       "subject": "English",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-28T20:35:29.371Z"
+      },
+      {
+       "category": "Safe",
+       "date": "2026-09-28",
+       "note": "Ahsgdjw",
+       "subject": "English",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-28T20:35:33.498Z"
+      }
+     ],
+     "recognitions": [
+      {
+       "date": "2026-09-28",
+       "emoji": "🤝",
+       "label": "Collaboration",
+       "subject": "CCP",
+       "teacherId": "E5036",
+       "teacherName": "Raiyan Anwar",
+       "time": "2026-09-28T10:40:59.906Z"
+      },
+      {
+       "date": "2026-09-28",
+       "emoji": "💡",
+       "label": "Creativity & Innovation",
+       "subject": "English",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-28T20:35:59.162Z"
+      }
+     ],
+     "total": 85
+    }
+   }
+  },
+  "S260230": {
+   "weeks": {}
+  },
+  "S260240": {
+   "weeks": {}
+  },
+  "S260322": {
+   "weeks": {}
+  },
+  "S260340": {
+   "weeks": {}
+  },
+  "S260415": {
+   "weeks": {}
+  },
+  "S260420": {
+   "weeks": {}
+  },
+  "S260461": {
+   "weeks": {}
+  },
+  "S260462": {
+   "weeks": {}
+  },
+  "S260489": {
+   "weeks": {}
+  },
+  "S260549": {
+   "weeks": {}
+  },
+  "S260553": {
+   "weeks": {}
+  },
+  "S260562": {
+   "weeks": {}
+  },
+  "S260603": {
+   "weeks": {}
+  },
+  "S260612": {
+   "weeks": {}
+  },
+  "S260667": {
+   "weeks": {
+    "2026-09-27": {
+     "deductions": [],
+     "recognitions": [
+      {
+       "date": "2026-09-27",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-27T12:10:38.904Z"
+      },
+      {
+       "date": "2026-09-27",
+       "emoji": "🧠",
+       "label": "Critical Thinking & Problem-Solving",
+       "subject": "CCP",
+       "teacherId": "master-teacher",
+       "teacherName": "Test Teacher",
+       "time": "2026-09-27T12:10:43.167Z"
+      }
+     ],
+     "total": 100
+    }
+   }
+  },
+  "S260729": {
+   "weeks": {}
+  },
+  "S260739": {
+   "weeks": {}
+  },
+  "S260764": {
+   "weeks": {}
+  },
+  "S260773": {
+   "weeks": {}
+  },
+  "S260776": {
+   "weeks": {}
+  },
+  "S260838": {
+   "weeks": {}
+  }
+ },
+ "config": {
+  "settings": {
+   "conductCategories": [
+    {
+     "key": "ready",
+     "label": "Ready"
+    },
+    {
+     "key": "respectful",
+     "label": "Respectful"
+    },
+    {
+     "key": "safe",
+     "label": "Safe"
+    }
+   ],
+   "interventionBelow": 80,
+   "recognitionTypes": [
+    {
+     "emoji": "💬",
+     "key": "communication",
+     "label": "Communication of Knowledge"
+    },
+    {
+     "emoji": "💡",
+     "key": "critical",
+     "label": "Critical Thinking & Problem-Solving"
+    },
+    {
+     "emoji": "⚙️",
+     "key": "creativity",
+     "label": "Creativity & Innovation"
+    },
+    {
+     "emoji": "⛰️",
+     "key": "collaboration",
+     "label": "Collaboration"
+    }
+   ],
+   "severity": {
+    "notableBelow": 5,
+    "urgentAbove": 20
+   }
+  }
+ }
+}

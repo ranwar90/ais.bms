@@ -1,0 +1,10 @@
+{
+  "name": "g8-discipline-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Al-Rowad International Schools — G8 Boys Discipline Tracker (Netlify deployment)",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
