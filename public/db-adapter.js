@@ -2,10 +2,11 @@
  * Connects the app to the Netlify API, keeping the same interface as the original
  * (window.claude.use('db' | 'downloads')). Staff sign in once with email + E-number;
  * the server returns a sign-in pass kept on this device for 30 days. No access key prompt.
- * Other teachers' changes arrive by polling every 15 s while the tab is visible.
+ * Other teachers' changes arrive every 60 s while the tab is visible (every 2 min on a hallway display),
+ * and immediately when the tab regains focus. Your own changes save instantly. Low usage keeps hosting costs down.
  */
 (function () {
-  const API = '/api/db', LOGIN = '/api/login', POLL_MS = 15000, TOKEN_KEY = 'g8_token';
+  const API = '/api/db', LOGIN = '/api/login', POLL_MS = 60000, DISPLAY_POLL_MS = 120000, TOKEN_KEY = 'g8_token';
   const cols = {}, etags = {}, listeners = [];
   let pollTimer = null, inFlight = null;
   try { localStorage.removeItem('g8_access_key'); } catch (e) {} // old shared-key prompt is gone
@@ -64,9 +65,12 @@
     }).finally(() => { inFlight = null; });
     return inFlight;
   }
+  function onDisplay() {
+    try { return !!(window.state && state.disp && (state.disp.mode === 'broadcast' || state.disp.present)); } catch (e) { return false; }
+  }
   function schedule() {
     clearTimeout(pollTimer);
-    pollTimer = setTimeout(() => { if (!document.hidden) poll(); schedule(); }, POLL_MS);
+    pollTimer = setTimeout(() => { if (!document.hidden && token()) poll(); schedule(); }, onDisplay() ? DISPLAY_POLL_MS : POLL_MS);
   }
   document.addEventListener('visibilitychange', () => { if (!document.hidden) poll(); });
   window.addEventListener('focus', () => poll());
