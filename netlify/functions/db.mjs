@@ -7,8 +7,9 @@
  *   POST /api/db  { op, path, data }   -> write one document           (needs a valid sign-in token)
  *
  * Sign-in is checked HERE, against the staff records, so staff passwords (E-numbers) are never sent to
- * browsers. A successful sign-in returns a pass (token) signed with the ACCESS_KEY environment variable,
- * valid for 30 days on that device. Changing ACCESS_KEY signs everyone out.
+ * browsers. A successful sign-in returns a pass (token) valid for 30 days on that device, signed with a
+ * private key the server creates by itself on first run and keeps in Netlify Blobs. No setup needed.
+ * (Optional: set an ACCESS_KEY environment variable to use your own key; changing it signs everyone out.)
  *
  * Permissions: teachers can read everything and write behaviour/skills records ("points") only.
  * Admins can write everything (students, staff, settings, points). Teachers never receive staff passwords.
@@ -18,7 +19,7 @@
  * set = replace a document; update = deep-merge (arrays replaced; fails if missing); delete = remove.
  */
 import { getStore } from "@netlify/blobs";
-import { createHmac, timingSafeEqual } from "node:crypto";
+import { createHmac, timingSafeEqual, randomBytes } from "node:crypto";
 import seed from "../../data/seed-data.json" with { type: "json" };
 
 const COLLECTIONS = ["students", "staff", "points", "config"];
@@ -51,6 +52,18 @@ function verify(token, secret) {
   const given = Buffer.from(sig, "base64url");
   if (given.length !== good.length || !timingSafeEqual(given, good)) return null;
   try { const p = JSON.parse(Buffer.from(body, "base64url").toString()); return p.exp > Date.now() ? p : null; } catch (e) { return null; }
+}
+
+/** Private signing key: ACCESS_KEY if set, otherwise generated once and stored with the data. */
+async function signingSecret(store) {
+  const fromEnv = env("ACCESS_KEY");
+  if (fromEnv) return fromEnv;
+  let s = await store.get("_signing_key", { type: "text" });
+  if (!s) {
+    await store.set("_signing_key", randomBytes(32).toString("hex"), { onlyIfNew: true }); // safe if two requests race
+    s = await store.get("_signing_key", { type: "text" });
+  }
+  return s;
 }
 
 async function ensureSeeded(store) {
@@ -89,9 +102,8 @@ async function handleLogin(req, store, secret) {
 }
 
 export default async (req) => {
-  const secret = env("ACCESS_KEY");
-  if (!secret) return json({ error: "Server not configured: set the ACCESS_KEY environment variable (see README)." }, 503);
   const store = getStore({ name: STORE_NAME, consistency: "strong" });
+  const secret = await signingSecret(store);
   const url = new URL(req.url);
 
   if (url.pathname.endsWith("/login")) {
