@@ -1,15 +1,15 @@
 /**
- * Connects the app to the Netlify API, keeping the same interface as the original
- * (window.claude.use('db' | 'downloads')). Staff sign in once with email + E-number;
- * the server returns a sign-in pass kept on this device for 30 days. No access key prompt.
- * Other teachers' changes arrive every 60 s while the tab is visible (every 2 min on a hallway display),
- * and immediately when the tab regains focus. Your own changes save instantly. Low usage keeps hosting costs down.
+ * Connects the app to the Netlify server with the same interface as the original
+ * (window.claude.use('db' | 'downloads')). Staff sign in once with email + E-number (30 days per device).
+ * Light on data: devices download only records that changed since their last copy; several saves made
+ * at the same moment (e.g. a group deduction) travel as one request. Updates from other teachers arrive
+ * every 60 s while visible (2 min on a hallway display) and straight away when the tab regains focus.
  */
 (function () {
   const API = '/api/db', LOGIN = '/api/login', POLL_MS = 60000, DISPLAY_POLL_MS = 120000, TOKEN_KEY = 'g8_token';
-  const cols = {}, etags = {}, listeners = [];
+  const cols = {}, seqs = {}, etags = {}, listeners = [];
   let pollTimer = null, inFlight = null;
-  try { localStorage.removeItem('g8_access_key'); } catch (e) {} // old shared-key prompt is gone
+  try { localStorage.removeItem('g8_access_key'); } catch (e) {}
 
   const token = () => { try { return localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { return ''; } };
   function signedOut() {
@@ -32,9 +32,17 @@
     if (l.id) return { exists: l.id in docs, id: l.id, data: () => docs[l.id] };
     return { docs: Object.keys(docs).map(id => ({ id, data: () => docs[id] })) };
   }
-  function apply(name, etag, docs) {
-    cols[name] = docs; etags[name] = etag;
-    listeners.filter(l => l.coll === name).forEach(l => { try { l.cb(snapshotFor(l)); } catch (e) { console.error(e); } });
+  function notify(name) { listeners.filter(l => l.coll === name).forEach(l => { try { l.cb(snapshotFor(l)); } catch (e) { console.error(e); } }); }
+  function applyServer(name, c) {
+    if (c.full) cols[name] = c.docs || {};
+    else {
+      const docs = Object.assign({}, cols[name] || {});
+      Object.entries(c.changed || {}).forEach(([id, d]) => { docs[id] = d; });
+      (c.deleted || []).forEach(id => { delete docs[id]; });
+      cols[name] = docs;
+    }
+    seqs[name] = c.seq; etags[name] = c.etag;
+    notify(name);
   }
   function banner(msg) {
     let el = document.getElementById('syncBanner');
@@ -53,9 +61,9 @@
   async function poll() {
     if (!token()) return;
     if (inFlight) return inFlight;
-    const q = '?etags=' + encodeURIComponent(Object.keys(etags).map(k => k + ':' + etags[k]).join(','));
+    const q = '?c=' + encodeURIComponent(Object.keys(seqs).map(k => k + ':' + seqs[k] + ':' + (etags[k] || '')).join(','));
     inFlight = call('GET', null, q).then(r => {
-      Object.entries(r.collections || {}).forEach(([name, c]) => apply(name, c.etag, c.docs));
+      Object.entries(r.collections || {}).forEach(([name, c]) => applyServer(name, c));
       banner(null);
     }).catch(e => {
       if (e.message === 'Signed out') return;
@@ -65,9 +73,7 @@
     }).finally(() => { inFlight = null; });
     return inFlight;
   }
-  function onDisplay() {
-    try { return !!(window.state && state.disp && (state.disp.mode === 'broadcast' || state.disp.present)); } catch (e) { return false; }
-  }
+  function onDisplay() { try { return !!(window.state && state.disp && (state.disp.mode === 'broadcast' || state.disp.present)); } catch (e) { return false; } }
   function schedule() {
     clearTimeout(pollTimer);
     pollTimer = setTimeout(() => { if (!document.hidden && token()) poll(); schedule(); }, onDisplay() ? DISPLAY_POLL_MS : POLL_MS);
@@ -81,9 +87,34 @@
     else if (token()) { poll(); schedule(); }
     return () => { const i = listeners.indexOf(l); if (i >= 0) listeners.splice(i, 1); };
   }
-  async function write(op, path, data) {
-    const r = await call('POST', { op, path, data });
-    apply(r.collection, r.etag, r.docs);
+
+  /* Saves made in the same moment are sent together as one request. */
+  let queue = [], flushTimer = null;
+  function write(op, path, data) {
+    return new Promise((resolve, reject) => {
+      queue.push({ w: { op, path, data }, resolve, reject });
+      if (!flushTimer) flushTimer = setTimeout(flush, 0);
+    });
+  }
+  async function flush() {
+    const items = queue; queue = []; flushTimer = null;
+    const applyResult = (r, it) => {
+      if (!r.ok) { const e = new Error(r.message || r.error); e.code = r.error; it.reject(e); return; }
+      const docs = Object.assign({}, cols[r.collection] || {});
+      if (r.deleted) delete docs[r.id]; else docs[r.id] = r.doc;
+      cols[r.collection] = docs; // own change shows at once; the next sync confirms it
+      it.resolve();
+    };
+    try {
+      if (items.length === 1) {
+        const r = await call('POST', items[0].w).then(x => Object.assign({ ok: true }, x), e => ({ ok: false, error: e.code, message: e.message }));
+        applyResult(r, items[0]);
+      } else {
+        const res = await call('POST', { op: 'batch', writes: items.map(i => i.w) });
+        res.results.forEach((r, k) => applyResult(r, items[k]));
+      }
+      [...new Set(items.map(i => i.w.path.split('/')[0]))].forEach(notify);
+    } catch (e) { items.forEach(i => i.reject(e)); }
   }
 
   window.netlifyAuth = {
