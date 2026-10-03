@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>G8 Boys Discipline Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Orbitron:wght@600;800;900&family=Share+Tech+Mono&family=Russo+One&family=Montserrat:wght@600;700;800;900&family=Bungee&family=Press+Start+2P&family=Permanent+Marker&family=Cinzel:wght@900&family=Playfair+Display:wght@900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Outfit:wght@600;700;800;900&family=Orbitron:wght@600;800;900&family=Share+Tech+Mono&family=Russo+One&family=Montserrat:wght@600;700;800;900&family=Bungee&family=Press+Start+2P&family=Permanent+Marker&family=Cinzel:wght@900&family=Playfair+Display:wght@900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #F4F6F9;
@@ -888,6 +888,46 @@
   .lp-sign { margin-top: 14px !important; }
   .lp-sign b { color: #0b2a55; }
   .lp-foot { position: absolute; left: 48px; right: 48px; bottom: 22px; border-top: 1px solid #d1d8e5; padding-top: 8px; text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 8.5px; color: #666e80; }
+  /* multi-select + undo */
+  .studentrow { gap: 10px; }
+  .studentrow .row-main { flex: 1; min-width: 0; }
+  .pick { flex: none; display: grid; place-items: center; width: 26px; height: 26px; cursor: pointer; }
+  .pick input { width: 18px; height: 18px; accent-color: var(--dark); cursor: pointer; }
+  .undo-btn { flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; border: 1px solid transparent;
+    background: transparent; color: #a3aab6; cursor: pointer; padding: 0; }
+  .undo-btn:hover { color: #6b7280; border-color: #e5e7eb; background: #f9fafb; }
+  .undo-btn svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .pick-names { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 10px; max-height: 92px; overflow-y: auto; }
+  .pick-names span { font-size: 12px; padding: 2px 9px; border-radius: 999px; background: var(--bg); border: 1px solid var(--border); }
+  /* report column visibility (admin) */
+  .col-eye { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-left: 6px; vertical-align: middle; border-radius: 6px;
+    border: 1px solid var(--border); background: var(--surface); color: #b0b6c2; cursor: pointer; padding: 0; }
+  .col-eye.on { color: var(--teal); border-color: var(--teal); }
+  .col-eye svg, .col-eye-help svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: -3px; }
+  .col-eye-help { margin-bottom: 10px; }
+  .report-table th.t-hidden { opacity: .45; }
+  .pick-bar { display: none; }
+  @media (max-width: 760px) {
+    .pick-bar { display: flex; align-items: center; gap: 10px; position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 40;
+      padding: 10px 12px; border-radius: 14px; background: var(--dark); color: #fff; box-shadow: 0 10px 28px rgba(0,0,0,.3); }
+    .pick-bar span { flex: 1; font-size: 14px; }
+    .pick-bar .btn { display: inline-flex; align-items: center; gap: 5px; }
+    .pick-bar .btn svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .pick-bar .btn:not(.primary) { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+  }
+  /* Arabic view */
+  html[lang="ar"] body { font-family: 'Tajawal', -apple-system, 'Segoe UI', Tahoma, sans-serif; }
+  html[dir="rtl"] .disp-stage, html[dir="rtl"] .d-broadcast, html[dir="rtl"] .d-thumbs { direction: ltr; }
+  html[dir="rtl"] .sheet-close { right: auto; left: 14px; }
+  html[dir="rtl"] .deck-back { margin-left: 0; margin-right: auto; }
+  html[dir="rtl"] .skills-hint { margin-left: 0; margin-right: auto; }
+  html[dir="rtl"] .skills-arrow { margin-left: 0; margin-right: auto; }
+  html[dir="rtl"] .skills-hint + .skills-arrow { margin-right: 0; }
+  html[dir="rtl"] th, html[dir="rtl"] td { text-align: right; }
+  html[dir="rtl"] .report-table td.col-cat, html[dir="rtl"] .report-table th.col-cat, html[dir="rtl"] .report-table .col-total, html[dir="rtl"] .report-table .col-sev { text-align: center; }
+  html[dir="rtl"] .lp-page { direction: ltr; }
+  .lang-btn span { font-family: 'Tajawal', inherit; }
+  .period-tag { display: inline-block; margin-right: 10px; padding: 2px 9px; border-radius: 999px; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-weight: 700; }
 </style>
 </head>
 <body>
@@ -946,6 +986,25 @@ function severityFor(flags) {
   if (flags > U) return { level: 'urgent', text: 'Urgent' };
   if (flags < N) return { level: 'notable', text: 'Notable' };
   return { level: 'severe', text: 'Severe' };
+}
+/** Which Student Flags report columns teachers can see (set by admin with the glasses icons).
+ *  Everything is visible by default except Recommended Intervention. */
+function teacherCanSee(key) {
+  const tc = (state.config && state.config.teacherColumns) || {};
+  return key === 'intervention' ? tc[key] === true : tc[key] !== false;
+}
+async function toggleTeacherCol(key) {
+  const val = !teacherCanSee(key);
+  state.config = Object.assign({}, state.config, { teacherColumns: Object.assign({}, (state.config && state.config.teacherColumns) || {}, { [key]: val }) });
+  render();
+  try { await state.db.doc('config/settings').update({ teacherColumns: { [key]: val } }); }
+  catch (e) { try { await state.db.doc('config/settings').set(Object.assign({}, state.config)); } catch (e2) { toast('Could not save that setting.'); } }
+}
+const GLASSES = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="14" r="3.6"/><circle cx="17.5" cy="14" r="3.6"/><path d="M10.1 14c1.2-1 2.6-1 3.8 0"/><path d="M2.9 13.2 4.4 8.5"/><path d="M21.1 13.2 19.6 8.5"/></svg>';
+function colEye(key) {
+  const on = teacherCanSee(key);
+  return '<button class="col-eye' + (on ? ' on' : '') + '" title="' + (on ? 'Visible to teachers. Click to hide' : 'Hidden from teachers. Click to show') + '" ' +
+    'onclick="event.stopPropagation();toggleTeacherCol(\'' + jsAttr(key) + '\')">' + GLASSES + '</button>';
 }
 function recognitionTypes() { return (state.config && state.config.recognitionTypes) || DEFAULT_RECOGNITION_TYPES; }
 const LOGO_WHITE_URI = "data:image/png;base64,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";
@@ -1299,6 +1358,8 @@ const state = {
   tRecogFlash: null,        // {key, at} for the award pop animation
   tConductFlash: null,      // {label, at} for the 'lost it' animation on a conduct value
   tSkillsOpen: false,       // Skills Recognition drawer pulled up?
+  tPicked: [],              // students ticked for a group deduction / recognition
+  tPendingTargets: null,    // students the pending note applies to
   breakdownFor: null,       // {sNumber, category} -> show modal of which subjects deducted it this week
   recogBreakdownFor: null,  // {sNumber, label} -> show modal of who awarded a recognition this week
 
@@ -1312,6 +1373,7 @@ const state = {
   configDraft: null,        // local unsaved copy while editing Settings — never touched by the live subscription
 
   // reports (shared teacher+admin view)
+  lang: (function () { try { return localStorage.getItem('g8_lang') || 'en'; } catch (e) { return 'en'; } })(),
   rClass: 'ALL',
   rSubject: 'ALL',
   reportBreakdownFor: null, // {sNumber, category}
@@ -1321,7 +1383,7 @@ function toast(msg) {
   const host = document.getElementById('toastHost');
   const el = document.createElement('div');
   el.className = 'toast';
-  el.textContent = msg;
+  el.textContent = (typeof arabicOn === 'function' && arabicOn()) ? trAr(msg) : msg;
   host.appendChild(el);
   setTimeout(() => el.remove(), 2600);
 }
@@ -1355,33 +1417,32 @@ function whoFlagged(sNumber, category, weekId) {
   return deductionsThisWeek(sNumber, weekId).filter(d => d.category === category);
 }
 
-async function applyDeduction(sNumber, category, subject, teacher, note) {
-  if (!state.db) { toast("Not connected — try again in a moment."); return; }
-  const weekId = currentWeekId();
-  const docRef = state.db.doc('points/' + sNumber);
-  const current = state.points[sNumber] || { weeks: {} };
-  const weekData = current.weeks && current.weeks[weekId] ? current.weeks[weekId] : { total: WEEK_START_POINTS, deductions: [] };
-  const newDeductions = weekData.deductions.concat([{
-    category, subject,
-    teacherId: teacher.id, teacherName: teacher.name,
-    note: note || '',
-    date: todayISO(),
-    time: new Date().toISOString(),
-  }]);
-  const newTotal = WEEK_START_POINTS - DEDUCTION_AMOUNT * newDeductions.length;
-  const payload = { weeks: {} };
-  payload.weeks[weekId] = { total: newTotal, deductions: newDeductions };
-  try {
-    await docRef.update(payload);
-  } catch (e) {
-    // Doc might not exist yet (roster not seeded / student added after seeding) — create it.
-    try { await docRef.set(payload); } catch (e2) { toast("Could not save — please retry."); console.error(e2); return; }
-  }
-  // optimistic local update so UI feels instant even before the snapshot echoes back
+async function applyDeduction(sNumber, category, subject, teacher, note) { return applyDeductionMany([sNumber], category, subject, teacher, note); }
+async function applyDeductionMany(ids, category, subject, teacher, note) {
+  if (!state.db) { toast("Not connected — try again in a moment."); return []; }
+  const weekId = currentWeekId(), now = new Date().toISOString(), today = todayISO();
+  const jobs = ids.map(sNumber => {
+    const current = state.points[sNumber] || { weeks: {} };
+    const weekData = current.weeks && current.weeks[weekId] ? current.weeks[weekId] : { total: WEEK_START_POINTS, deductions: [] };
+    const deductions = (weekData.deductions || []).concat([{ category, subject, teacherId: teacher.id, teacherName: teacher.name, note: note || '', date: today, time: now }]);
+    const wk = { total: WEEK_START_POINTS - DEDUCTION_AMOUNT * deductions.length, deductions };
+    return { sNumber, wk };
+  });
+  const results = await Promise.all(jobs.map(j => writeWeek(j.sNumber, weekId, j.wk)));
+  const ok = jobs.filter((j, i) => results[i]);
+  if (ok.length < jobs.length) toast('Could not save ' + (jobs.length - ok.length) + ' entr' + (jobs.length - ok.length === 1 ? 'y' : 'ies') + ' — please retry.');
+  render();
+  return ok.map(j => j.sNumber);
+}
+/** Save one student's week (merge), creating the record if needed, and update the screen copy. */
+async function writeWeek(sNumber, weekId, wk) {
+  const payload = { weeks: { [weekId]: wk } }, ref = state.db.doc('points/' + sNumber);
+  try { await ref.update(payload); }
+  catch (e) { try { await ref.set(payload); } catch (e2) { console.error(e2); return false; } }
   if (!state.points[sNumber]) state.points[sNumber] = { weeks: {} };
   state.points[sNumber].weeks = state.points[sNumber].weeks || {};
-  state.points[sNumber].weeks[weekId] = { total: newTotal, deductions: newDeductions };
-  render();
+  state.points[sNumber].weeks[weekId] = Object.assign({}, state.points[sNumber].weeks[weekId], wk);
+  return true;
 }
 
 function recognitionsThisWeek(sNumber, weekId) {
@@ -1392,25 +1453,21 @@ function recognitionsThisWeek(sNumber, weekId) {
 function recognitionCount(sNumber, weekId, label) {
   return recognitionsThisWeek(sNumber, weekId).filter(r => r.label === label).length;
 }
-async function giveRecognition(sNumber, recogDescriptor, teacher, subject) {
-  if (!state.db) { toast("Not connected — try again in a moment."); return; }
-  const weekId = currentWeekId();
-  const current = state.points[sNumber] || { weeks: {} };
-  const weekData = current.weeks && current.weeks[weekId]
-    ? current.weeks[weekId] : { total: WEEK_START_POINTS, deductions: [] };
-  const newRecognitions = (weekData.recognitions || []).concat([{
-    label: recogDescriptor.label, emoji: recogDescriptor.emoji,
-    teacherId: teacher.id, teacherName: teacher.name, subject: subject || '',
-    date: todayISO(), time: new Date().toISOString(),
-  }]);
-  const docRef = state.db.doc('points/' + sNumber);
-  const payload = { weeks: {} };
-  payload.weeks[weekId] = { total: weekData.total, deductions: weekData.deductions, recognitions: newRecognitions };
-  try { await docRef.update(payload); } catch (e) { try { await docRef.set(payload); } catch (e2) { toast('Could not save.'); return; } }
-  if (!state.points[sNumber]) state.points[sNumber] = { weeks: {} };
-  state.points[sNumber].weeks = state.points[sNumber].weeks || {};
-  state.points[sNumber].weeks[weekId] = payload.weeks[weekId];
+async function giveRecognition(sNumber, recogDescriptor, teacher, subject) { return giveRecognitionMany([sNumber], recogDescriptor, teacher, subject); }
+async function giveRecognitionMany(ids, recogDescriptor, teacher, subject) {
+  if (!state.db) { toast("Not connected — try again in a moment."); return []; }
+  const weekId = currentWeekId(), now = new Date().toISOString(), today = todayISO();
+  const jobs = ids.map(sNumber => {
+    const current = state.points[sNumber] || { weeks: {} };
+    const weekData = current.weeks && current.weeks[weekId] ? current.weeks[weekId] : { total: WEEK_START_POINTS, deductions: [] };
+    const recognitions = (weekData.recognitions || []).concat([{ label: recogDescriptor.label, emoji: recogDescriptor.emoji,
+      teacherId: teacher.id, teacherName: teacher.name, subject: subject || '', date: today, time: now }]);
+    return { sNumber, wk: { total: weekData.total == null ? WEEK_START_POINTS : weekData.total, deductions: weekData.deductions || [], recognitions } };
+  });
+  const results = await Promise.all(jobs.map(j => writeWeek(j.sNumber, weekId, j.wk)));
+  if (results.some(r => !r)) toast('Some recognitions could not be saved — please retry.');
   render();
+  return jobs.filter((j, i) => results[i]).map(j => j.sNumber);
 }
 
 /** Homepage leaderboard for one recognition type & week:
@@ -1435,6 +1492,24 @@ function computeRecognitionLeaderboard(weekId, recogDescriptor) {
 }
 
 /* ---------------- cumulative (all-time) helpers for Reports ---------------- */
+/** Admin's chosen reporting period (teachers always see all-time). Dates are YYYY-MM-DD, inclusive. */
+function isoAddDays(iso, n) { const d = new Date(iso + 'T00:00:00'); d.setDate(d.getDate() + n); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+function reportRange() {
+  if (!(state.user && state.user.role === 'admin')) return null;
+  const r = state.rRange || 'all', today = todayISO(), wk = currentWeekId();
+  if (r === 'week') return { from: wk, to: isoAddDays(wk, 6), label: 'This week' };
+  if (r === 'lastweek') return { from: isoAddDays(wk, -7), to: isoAddDays(wk, -1), label: 'Last week' };
+  if (r === 'month') return { from: today.slice(0, 8) + '01', to: today, label: 'This month' };
+  if (r === 'custom' && (state.rFrom || state.rTo)) return { from: state.rFrom || '', to: state.rTo || '', label: (state.rFrom || '…') + ' to ' + (state.rTo || '…') };
+  return null;
+}
+function inReportRange(x) {
+  const R = reportRange(); if (!R) return true;
+  const d = x.date || ''; return (!R.from || d >= R.from) && (!R.to || d <= R.to);
+}
+function reportPeriodLabel() { const R = reportRange(); return R ? R.label : 'All time'; }
+function setRRange(v) { state.rRange = v; render(); }
+function setRDate(which, v) { state[which] = v; render(); }
 function allDeductionsCumulative(sNumber) {
   const doc = state.points[sNumber];
   if (!doc || !doc.weeks) return [];
@@ -1456,7 +1531,7 @@ function allRecognitionsCumulative(sNumber) {
  *  >3 combined -> "Student intervention". 1-3 -> "Sit with <teacher names>" (deduped by name).
  *  0 -> no flag. */
 function computeIntervention(sNumber, subjectFilter) {
-  let all = allDeductionsCumulative(sNumber);
+  let all = allDeductionsCumulative(sNumber).filter(inReportRange);
   if (subjectFilter && subjectFilter !== 'ALL') all = all.filter(d => d.subject === subjectFilter);
   const byCategory = {};
   all.forEach(d => {
@@ -1712,7 +1787,13 @@ async function exportCSV(filename, headers, rows) {
 initCapabilities();
 
 /* ============================= RENDER ============================= */
+/* Heavy calculations (rankings, summaries, report tables) are cached for the duration of one screen
+   update and cleared whenever the screen redraws, so each is computed once instead of many times. */
+let _memo = new Map();
+function memo(key, fn) { if (_memo.has(key)) return _memo.get(key); const v = fn(); _memo.set(key, v); return v; }
+function clearMemo() { _memo = new Map(); }
 function render() {
+  clearMemo();
   const ae = document.activeElement, keepId = ae && ae.id && /^(noteBox|recogNoteBox|ivnote_)/.test(ae.id) ? ae.id : null;
   const selS = keepId ? ae.selectionStart : 0, selE = keepId ? ae.selectionEnd : 0;
   const dlgVal = state.dialog && document.getElementById('dlgInput') ? document.getElementById('dlgInput').value : null;
@@ -1723,6 +1804,11 @@ function render() {
     document.getElementById('app').insertAdjacentHTML('beforeend', renderDialog());
     if (dlgVal !== null && document.getElementById('dlgInput')) document.getElementById('dlgInput').value = dlgVal;
   }
+  // Arabic view: right-to-left, translated after drawing (names and hallway slides untouched)
+  const ar = arabicOn();
+  document.documentElement.dir = ar ? 'rtl' : 'ltr';
+  document.documentElement.lang = ar ? 'ar' : 'en';
+  if (ar) applyArabic(document.getElementById('app'));
   if (keepId) {
     const el = document.getElementById(keepId);
     if (el) { el.focus(); try { el.setSelectionRange(selS, selE); } catch (e) {} }
@@ -1797,7 +1883,7 @@ function renderLogin(app) {
         : ''
       ) +
       '<div class="subtle" style="margin-top:18px;border-top:1px solid var(--border);padding-top:12px;">' +
-        'Note: this login is for attribution only (so we know who logged what) — it is not secure, encrypted authentication. Don\'t use it to protect sensitive information.' +
+        'Your sign-in is checked by the school server and stays active on this device for 30 days.' +
       '</div>' +
     '</div></div>';
 }
@@ -1858,8 +1944,13 @@ function renderTeacher(app) {
             'onclick="event.stopPropagation(); openRecogBreakdown(\'' + st.id + '\',\'' + jsAttr(r.label) + '\')">' +
             r.emoji + (c > 1 ? '<span>×' + c + '</span>' : '') + '</button>';
         }).join('');
-        return '<div class="studentrow' + (state.tSelectedStudent === st.id ? ' selected' : '') + '" onclick="selectStudent(\'' + st.id + '\')">' +
-          '<div><div class="name">' + escapeHtml(st.name) + '</div><div class="dots">' + dots + recogIcons + '</div></div>' +
+        const picked = state.tPicked.includes(st.id);
+        const canUndo = !!lastUndoable(st.id);
+        return '<div class="studentrow' + (state.tSelectedStudent === st.id || picked ? ' selected' : '') + '" onclick="rowTap(\'' + st.id + '\')">' +
+          '<label class="pick" onclick="event.stopPropagation()" title="Select for a group entry"><input type="checkbox"' + (picked ? ' checked' : '') +
+            ' onchange="togglePick(\'' + st.id + '\', this.checked)"></label>' +
+          '<div class="row-main"><div class="name">' + escapeHtml(st.name) + '</div><div class="dots">' + dots + recogIcons + '</div></div>' +
+          (canUndo ? '<button class="undo-btn" title="Undo your last entry for this student today" onclick="event.stopPropagation();undoLast(\'' + st.id + '\')">' + ICONS.undo + '</button>' : '') +
           '<div class="pill ' + pillClass + '">' + total + '</div>' +
         '</div>';
       }).join('');
@@ -1879,13 +1970,16 @@ function renderTeacher(app) {
       '</div>' +
       '<div class="layout2">' +
         '<div class="card"><div class="roster-head"><h2>' + (state.tClass || 'Class') + ' Roster</h2>' + classAvgBadge(state.tClass) + '</div><div class="studentlist">' + studentListHtml + '</div></div>' +
-        (state.tSelectedStudent ? '<div class="sheet-backdrop" onclick="closeSidePanel()"></div>' : '') +
-        '<div class="sidepanel' + (state.tSelectedStudent ? ' sheet-open' : '') + '">' +
-          (state.tSelectedStudent ? '<div class="sheet-handle"></div><button class="btn ghost small sheet-close" onclick="closeSidePanel()" style="color:var(--text);border-color:var(--border);background:var(--bg);">✕ Close</button>' : '') +
+        (sheetShown() ? '<div class="sheet-backdrop" onclick="closeSidePanel()"></div>' : '') +
+        '<div class="sidepanel' + (sheetShown() ? ' sheet-open' : '') + '" onclick="panelTap(event)">' +
+          (sheetShown() ? '<div class="sheet-handle"></div><button class="btn ghost small sheet-close" onclick="closeSidePanel()" style="color:var(--text);border-color:var(--border);background:var(--bg);">✕ Close</button>' : '') +
           renderSidePanel() +
         '</div>' +
       '</div>' +
     '</div>' +
+    (state.tPicked.length && !state.tGroupOpen
+      ? '<div class="pick-bar"><span><b>' + state.tPicked.length + '</b> selected</span><button class="btn small" onclick="clearPicks()">Clear</button>' +
+        '<button class="btn small primary" onclick="openGroup()">Log for group ' + ICONS.up + '</button></div>' : '') +
     renderBreakdownModal() + renderRecogBreakdownModal();
 }
 
@@ -1901,6 +1995,8 @@ const ICONS = {
   settings: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10"/><path d="M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h3"/><path d="M11 17h9"/><circle cx="9" cy="17" r="2"/><path d="M4 12h6"/><path d="M14 12h6"/><circle cx="12" cy="12" r="2"/></svg>',
   hallway: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8.5 21h7"/><path d="M12 17v4"/></svg>',
   reset: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/></svg>',
+  undo: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>',
+  globe: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.6 5.7 3.6 9s-1.1 6.3-3.6 9c-2.5-2.7-3.6-5.7-3.6-9S9.5 5.7 12 3Z"/></svg>',
   signout: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h5v16h-5"/><path d="M9.5 16.5 14 12 9.5 7.5"/><path d="M14 12H3.5"/></svg>',
   star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9L12 2.8Z"/></svg>',
   up: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/><path d="m6 19 6-6 6 6" opacity=".45"/></svg>',
@@ -1911,7 +2007,7 @@ function appHeader(rightHtml) {
   return '<div class="topbar">' +
     '<div class="tb-left"><img src="' + LOGO_WHITE_URI + '" alt="Al-Rowad International Schools"></div>' +
     '<div class="apptitle"><div class="t1">AIS Middle Grades - Boys</div><div class="t2">Behaviour Management System</div></div>' +
-    '<div class="tb-right">' + (rightHtml || '') + '</div>' +
+    '<div class="tb-right">' + (rightHtml || '') + langButton() + '</div>' +
   '</div>';
 }
 function userControls(label) {
@@ -1931,33 +2027,48 @@ function renderTopbar(activeSection) {
     userControls(escapeHtml(state.user.name) + (state.user.subjects.length ? ' · ' + escapeHtml(state.user.subjects.join('/')) : '')));
 }
 
+/** Students the panel acts on: the ticked group, or the one student tapped. */
+/** On a phone the panel slides up for one student, or for a ticked group once "Log for group" is tapped. */
+function sheetShown() { return !!state.tSelectedStudent || (state.tPicked.length > 0 && !!state.tGroupOpen); }
+function openGroup() { state.tGroupOpen = true; render(); }
+function panelTargets() {
+  if (state.tPicked.length) return state.tPicked.filter(id => state.students.some(s => s.id === id));
+  return state.tSelectedStudent ? [state.tSelectedStudent] : [];
+}
 function renderSidePanel() {
-  if (!state.tSelectedStudent) return '<div class="card empty-hint">Select a student to log a behavior.</div>';
-  const st = state.students.find(s => s.id === state.tSelectedStudent);
+  const targets = panelTargets(), group = state.tPicked.length > 0;
+  if (!targets.length) return '<div class="card empty-hint">Select a student to log a behavior, or tick several students for a group entry.</div>';
+  const st = state.students.find(s => s.id === targets[0]);
   if (!st) return '<div class="card empty-hint">Student not found.</div>';
   const total = weeklyTotal(st.id, currentWeekId());
+  const headCard = group
+    ? '<div class="card"><div class="sname">' + targets.length + ' student' + (targets.length === 1 ? '' : 's') + ' selected</div>' +
+        '<div class="pick-names">' + targets.map(id => { const s = state.students.find(x => x.id === id); return '<span>' + escapeHtml(s ? s.name : id) + '</span>'; }).join('') + '</div>' +
+        '<button class="btn small" onclick="clearPicks()">Clear selection</button></div>'
+    : '<div class="card"><div class="sname">' + escapeHtml(st.name) + '</div><div class="stotal">' + total + ' / 100 pts this week' + (state.tSubject ? ' · ' + escapeHtml(state.tSubject) : '') + '</div></div>';
   if (!state.tSubject) {
-    return '<div class="card"><div class="sname">' + escapeHtml(st.name) + '</div><div class="stotal">' + total + ' pts this week</div>' +
-      '<div class="empty-hint">Select a subject above to log a behavior for this student.</div></div>';
+    return headCard.replace(/<\/div>$/, '') + '<div class="empty-hint">Select a subject above to log a behavior.</div></div>';
   }
 
   const cf = state.tConductFlash;
   const conductButtons = conductCategories().map(cat => {
-    const locked = isLockedToday(st.id, state.tSubject, cat.label);
+    const done = targets.filter(id => isLockedToday(id, state.tSubject, cat.label)).length;
+    const locked = done === targets.length;
     const hit = locked && cf && cf.label === cat.label && Date.now() - cf.at < 1200;
+    const chip = locked ? '−' + DEDUCTION_AMOUNT + ' · today' : group ? (done ? (targets.length - done) + ' of ' + targets.length + ' left' : 'All ' + targets.length) : 'Intact';
     return '<button class="valbtn' + (locked ? ' lost' : '') + (hit ? ' hit' : '') + '" ' +
       (locked ? 'disabled title="Already logged for ' + escapeHtml(state.tSubject) + ' today"' : 'title="Tap to deduct ' + DEDUCTION_AMOUNT + ' points"') +
       ' onclick="pressCategory(\'' + cat.key + '\')">' +
       '<span class="val-ring">' + (locked ? '✕' : '✓') + '</span>' +
       '<span class="val-label">' + escapeHtml(cat.label) + '</span>' +
-      '<span class="val-chip">' + (locked ? '−' + DEDUCTION_AMOUNT + ' · today' : 'Intact') + '</span>' +
+      '<span class="val-chip">' + chip + '</span>' +
       '</button>';
   }).join('');
 
   let noteBlock = '';
   if (state.tPendingCategory) {
     noteBlock = '<div class="noteflag">−' + DEDUCTION_AMOUNT + ' logged for <b>' + escapeHtml(state.tPendingCategory) + '</b>. Add an optional note:</div>' +
-      '<textarea class="note" id="noteBox" placeholder="e.g. still talking after explanation started" oninput="state.tNoteDraft=this.value">' + escapeHtml(state.tNoteDraft) + '</textarea>' +
+      '<textarea class="note" dir="auto" id="noteBox" placeholder="e.g. still talking after explanation started" oninput="state.tNoteDraft=this.value">' + escapeHtml(state.tNoteDraft) + '</textarea>' +
       '<div class="row" style="margin-top:8px;">' +
         '<button class="btn small primary" onclick="saveNote()">Save note</button>' +
         '<button class="btn small ghost" onclick="dismissNote()" style="color:var(--text-dim);border-color:var(--border);background:var(--surface);">Skip</button>' +
@@ -1966,7 +2077,7 @@ function renderSidePanel() {
 
   const fl = state.tRecogFlash;
   const skillButtons = recognitionTypes().map(r => {
-    const n = recognitionCount(st.id, currentWeekId(), r.label);
+    const n = group ? 0 : recognitionCount(st.id, currentWeekId(), r.label);
     const pop = fl && fl.key === r.key && Date.now() - fl.at < 900;
     return '<button class="skillbtn' + (pop ? ' pop' : '') + '" onclick="submitRecognition(\'' + r.key + '\')">' +
       '<span class="skill-icon">' + r.emoji + '</span><span class="skill-label">' + escapeHtml(r.label) + '</span>' +
@@ -1975,19 +2086,16 @@ function renderSidePanel() {
   let skillNoteBlock = '';
   if (state.tPendingRecog) {
     skillNoteBlock = '<div class="skill-noteflag"><b>' + escapeHtml(state.tPendingRecog) + '</b> recognised. Add an optional note:</div>' +
-      '<textarea class="note" id="recogNoteBox" placeholder="e.g. explained the method clearly to his group" oninput="state.tRecogNoteDraft=this.value">' + escapeHtml(state.tRecogNoteDraft) + '</textarea>' +
+      '<textarea class="note" dir="auto" id="recogNoteBox" placeholder="e.g. explained the method clearly to his group" oninput="state.tRecogNoteDraft=this.value">' + escapeHtml(state.tRecogNoteDraft) + '</textarea>' +
       '<div class="row" style="margin-top:8px;">' +
         '<button class="btn small skill-save" onclick="saveRecogNote()">Save note</button>' +
         '<button class="btn small" onclick="dismissRecogNote()">Skip</button>' +
       '</div>';
   }
-  const skillsTotal = recognitionTypes().reduce((s, r) => s + recognitionCount(st.id, currentWeekId(), r.label), 0);
+  const skillsTotal = group ? 0 : recognitionTypes().reduce((s, r) => s + recognitionCount(st.id, currentWeekId(), r.label), 0);
   const open = state.tSkillsOpen || !!state.tPendingRecog;
 
-  return '<div class="card">' +
-      '<div class="sname">' + escapeHtml(st.name) + '</div>' +
-      '<div class="stotal">' + total + ' / 100 pts this week · ' + escapeHtml(state.tSubject) + '</div>' +
-    '</div>' +
+  return headCard +
     '<div class="card-deck' + (open ? ' stacked' : '') + '">' +
     '<div class="panelbox conductbox">' +
       '<div class="boxlabel conduct-head"' + (open ? ' onclick="setSkillsOpen(false)"' : '') + '>Behavior Conduct' +
@@ -2047,7 +2155,7 @@ async function submitRecognition(key) {
   if (!r) return;
   await commitPendingNotes();
   state.tRecogFlash = { key, at: Date.now() };
-  await giveRecognition(state.tSelectedStudent, r, state.user, state.tSubject);
+  state.tPendingRecogTargets = await giveRecognitionMany(panelTargets(), r, state.user, state.tSubject);
   state.tPendingRecog = r.label;
   state.tRecogNoteDraft = '';
   toast(r.emoji + ' Recognition logged.');
@@ -2061,23 +2169,21 @@ async function commitPendingNotes() {
   if (state.tPendingRecog && state.tRecogNoteDraft.trim()) await saveRecogNote();
 }
 async function saveRecogNote() {
-  const sNumber = state.tSelectedStudent;
-  const weekId = currentWeekId();
-  const doc = state.points[sNumber];
-  const label = state.tPendingRecog, note = state.tRecogNoteDraft;
-  state.tPendingRecog = null; state.tRecogNoteDraft = '';
-  if (!doc || !doc.weeks || !doc.weeks[weekId] || !note.trim()) { render(); return; }
-  const recognitions = (doc.weeks[weekId].recognitions || []).slice();
-  for (let i = recognitions.length - 1; i >= 0; i--) {
-    if (recognitions[i].label === label && recognitions[i].teacherId === state.user.id) {
-      recognitions[i] = Object.assign({}, recognitions[i], { note });
-      break;
+  const weekId = currentWeekId(), label = state.tPendingRecog, note = state.tRecogNoteDraft.trim();
+  const ids = state.tPendingRecogTargets || (state.tSelectedStudent ? [state.tSelectedStudent] : []);
+  state.tPendingRecog = null; state.tRecogNoteDraft = ''; state.tPendingRecogTargets = null;
+  if (!note) { render(); return; }
+  const jobs = ids.map(sNumber => {
+    const doc = state.points[sNumber];
+    if (!doc || !doc.weeks || !doc.weeks[weekId]) return null;
+    const recognitions = (doc.weeks[weekId].recognitions || []).slice();
+    for (let i = recognitions.length - 1; i >= 0; i--) {
+      if (recognitions[i].label === label && recognitions[i].teacherId === state.user.id) { recognitions[i] = Object.assign({}, recognitions[i], { note }); break; }
     }
-  }
-  const payload = { weeks: {} };
-  payload.weeks[weekId] = { recognitions };
-  try { await state.db.doc('points/' + sNumber).update(payload); toast('Note saved.'); } catch (e) { toast('Could not save note.'); console.error(e); }
-  state.points[sNumber].weeks[weekId] = Object.assign({}, state.points[sNumber].weeks[weekId], payload.weeks[weekId]);
+    return writeWeek(sNumber, weekId, { recognitions });
+  }).filter(Boolean);
+  const res = await Promise.all(jobs);
+  toast(res.every(Boolean) ? 'Note saved.' : 'Could not save every note — please retry.');
   render();
 }
 function dismissRecogNote() { state.tPendingRecog = null; state.tRecogNoteDraft = ''; render(); }
@@ -2120,41 +2226,88 @@ function renderHomePage(app) {
 
 async function setTClass(v) { await commitPendingNotes(); state.tClass = v; state.tSelectedStudent = null; state.tPendingCategory = null; state.tPendingRecog = null; render(); }
 async function setTSubject(v) { await commitPendingNotes(); state.tSubject = v; state.tPendingCategory = null; state.tPendingRecog = null; render(); }
+/** Tap on a name: opens that student, or while a group is being ticked, adds/removes him. */
+function rowTap(sNumber) { if (state.tPicked.length) togglePick(sNumber, !state.tPicked.includes(sNumber)); else selectStudent(sNumber); }
+async function togglePick(sNumber, on) {
+  await commitPendingNotes();
+  if (on && !state.tPicked.includes(sNumber)) {
+    if (!state.tPicked.length && state.tSelectedStudent && state.tSelectedStudent !== sNumber) state.tPicked.push(state.tSelectedStudent); // keep the open student in the group
+    state.tPicked.push(sNumber);
+  }
+  if (!on) state.tPicked = state.tPicked.filter(x => x !== sNumber);
+  state.tSelectedStudent = state.tPicked.length ? null : state.tSelectedStudent;
+  if (!state.tPicked.length) state.tGroupOpen = false;
+  state.tPendingCategory = null; state.tPendingRecog = null; state.tPendingTargets = null;
+  render();
+}
+async function clearPicks() { await commitPendingNotes(); state.tPicked = []; state.tGroupOpen = false; state.tSelectedStudent = null; render(); }
+/** Tap on an empty part of a panel closes it: the Skills card slides down, the student panel closes. */
+function panelTap(e) {
+  if (e.target.closest('button, textarea, input, select, a, label, .countbubble')) return;
+  if (e.target.closest('.skillsbox') && state.tSkillsOpen) { setSkillsOpen(false); return; }
+  if (!window.matchMedia('(max-width: 760px)').matches) return; // on a phone the whole panel closes
+  if (e.target.closest('.sidepanel.sheet-open')) closeSidePanel();
+}
+/** The teacher's own latest entry for this student today (a deduction or a skill), or null. */
+function lastUndoable(sNumber) {
+  const wd = getWeekData(sNumber, currentWeekId()), today = todayISO(), me = state.user && state.user.id;
+  const mine = x => x.teacherId === me && x.date === today;
+  const ev = (wd.deductions || []).filter(d => mine(d) && d.category !== 'Admin Adjustment').map(d => ({ kind: 'ded', item: d }))
+    .concat((wd.recognitions || []).filter(mine).map(r => ({ kind: 'rec', item: r })));
+  ev.sort((a, b) => String(a.item.time || '').localeCompare(String(b.item.time || '')));
+  return ev.length ? ev[ev.length - 1] : null;
+}
+/** Undo the most recent of today's own entries for one student; press again to keep going back. */
+async function undoLast(sNumber) {
+  const last = lastUndoable(sNumber); if (!last) return;
+  const weekId = currentWeekId(), wd = getWeekData(sNumber, weekId), st = state.students.find(s => s.id === sNumber);
+  let wk;
+  if (last.kind === 'ded') {
+    const i = (wd.deductions || []).lastIndexOf(last.item), deductions = wd.deductions.slice(0, i).concat(wd.deductions.slice(i + 1));
+    wk = { total: WEEK_START_POINTS - DEDUCTION_AMOUNT * deductions.length, deductions };
+  } else {
+    const i = (wd.recognitions || []).lastIndexOf(last.item);
+    wk = { recognitions: wd.recognitions.slice(0, i).concat(wd.recognitions.slice(i + 1)) };
+  }
+  if (!(await writeWeek(sNumber, weekId, wk))) { toast('Could not undo — please retry.'); return; }
+  toast('Undone for ' + (st ? st.name.split(' ')[0] : sNumber) + ': ' + (last.kind === 'ded' ? last.item.category + ' (+' + DEDUCTION_AMOUNT + ' back)' : last.item.label));
+  state.tPendingCategory = null; state.tPendingRecog = null; state.tPendingTargets = null;
+  render();
+}
 async function selectStudent(sNumber) { await commitPendingNotes(); state.tSelectedStudent = sNumber; state.tPendingCategory = null; state.tNoteDraft = ''; state.tPendingRecog = null; state.tRecogNoteDraft = ''; render(); }
-async function closeSidePanel() { await commitPendingNotes(); state.tSelectedStudent = null; state.tPendingCategory = null; state.tNoteDraft = ''; state.tPendingRecog = null; state.tRecogNoteDraft = ''; render(); }
+async function closeSidePanel() { await commitPendingNotes(); state.tSelectedStudent = null; state.tPicked = []; state.tGroupOpen = false; state.tPendingCategory = null; state.tNoteDraft = ''; state.tPendingRecog = null; state.tRecogNoteDraft = ''; render(); }
 
 async function pressCategory(catKey) {
   const cat = conductCategories().find(c => c.key === catKey);
   if (!cat) return;
-  const sNumber = state.tSelectedStudent;
-  if (!sNumber || !state.tSubject) return;
-  if (isLockedToday(sNumber, state.tSubject, cat.label)) return; // guard against double-fire
+  if (!state.tSubject) return;
+  const ids = panelTargets().filter(id => !isLockedToday(id, state.tSubject, cat.label)); // never twice for the same value, subject and day
+  if (!ids.length) return;
   await commitPendingNotes();
   state.tConductFlash = { label: cat.label, at: Date.now() };
-  await applyDeduction(sNumber, cat.label, state.tSubject, state.user, '');
+  state.tPendingTargets = await applyDeductionMany(ids, cat.label, state.tSubject, state.user, '');
+  if (ids.length > 1) toast('−' + DEDUCTION_AMOUNT + ' ' + cat.label + ' logged for ' + state.tPendingTargets.length + ' students.');
   state.tPendingCategory = cat.label;
   state.tNoteDraft = '';
   render();
 }
 async function saveNote() {
-  const sNumber = state.tSelectedStudent;
-  const weekId = currentWeekId();
-  const doc = state.points[sNumber];
-  if (!doc || !doc.weeks || !doc.weeks[weekId]) { state.tPendingCategory = null; render(); return; }
-  const deductions = doc.weeks[weekId].deductions.slice();
-  // attach the note to the most recent matching deduction (the one just pressed)
-  for (let i = deductions.length - 1; i >= 0; i--) {
-    if (deductions[i].category === state.tPendingCategory && deductions[i].subject === state.tSubject && deductions[i].teacherId === state.user.id) {
-      deductions[i] = Object.assign({}, deductions[i], { note: state.tNoteDraft.trim() });
-      break;
+  const weekId = currentWeekId(), cat = state.tPendingCategory, note = state.tNoteDraft.trim();
+  const ids = state.tPendingTargets || (state.tSelectedStudent ? [state.tSelectedStudent] : []);
+  state.tPendingCategory = null; state.tNoteDraft = ''; state.tPendingTargets = null;
+  const jobs = ids.map(sNumber => {
+    const doc = state.points[sNumber];
+    if (!doc || !doc.weeks || !doc.weeks[weekId]) return null;
+    const deductions = (doc.weeks[weekId].deductions || []).slice();
+    for (let i = deductions.length - 1; i >= 0; i--) { // the entry just made (latest matching)
+      if (deductions[i].category === cat && deductions[i].subject === state.tSubject && deductions[i].teacherId === state.user.id) {
+        deductions[i] = Object.assign({}, deductions[i], { note }); break;
+      }
     }
-  }
-  const payload = { weeks: {} };
-  payload.weeks[weekId] = { total: doc.weeks[weekId].total, deductions };
-  state.tPendingCategory = null;
-  try { await state.db.doc('points/' + sNumber).update(payload); if (state.tNoteDraft.trim()) toast('Note saved.'); } catch (e) { toast('Could not save note.'); console.error(e); }
-  state.points[sNumber].weeks[weekId] = Object.assign({}, state.points[sNumber].weeks[weekId], payload.weeks[weekId]);
-  state.tNoteDraft = '';
+    return writeWeek(sNumber, weekId, { total: doc.weeks[weekId].total, deductions });
+  }).filter(Boolean);
+  const res = await Promise.all(jobs);
+  if (note) toast(res.every(Boolean) ? 'Note saved.' : 'Could not save every note — please retry.');
   render();
 }
 function dismissNote() { state.tPendingCategory = null; state.tNoteDraft = ''; render(); }
@@ -2204,7 +2357,8 @@ function classStarChip(c) {
 }
 /** Students ranked by points, then skills recognitions this week. Level on both = same rank,
  *  listed alphabetically. Only students with at least one skill recognition are included. */
-function computeTopStudents(weekId, n) {
+function computeTopStudents(weekId, n) { return memo('ts:' + weekId + ':' + n, () => _computeTopStudents(weekId, n)); }
+function _computeTopStudents(weekId, n) {
   const list = state.students.map(st => {
     const wd = getWeekData(st.id, weekId);
     const recs = wd.recognitions || [];
@@ -2224,7 +2378,8 @@ function topStudentRows(weekId, withLetters) {
     (more > 0 ? '<div class="subtle" style="padding-top:6px;">+' + more + ' more tied</div>' : '')
     || '<div class="subtle">No skills recognitions yet this week.</div>';
 }
-function computeWeekSummary(weekId) {
+function computeWeekSummary(weekId) { return memo('ws:' + weekId, () => _computeWeekSummary(weekId)); }
+function _computeWeekSummary(weekId) {
   const perStudent = state.students.map(st => ({
     id: st.id, name: st.name, className: st.className, total: weeklyTotal(st.id, weekId)
   }));
@@ -2633,6 +2788,7 @@ async function saveConfig() {
   try {
     await state.db.doc('config/settings').set({ conductCategories: conductCats, recognitionTypes: recogTypes,
       severity: { urgentAbove: sev.urgentAbove, notableBelow: sev.notableBelow },
+      teacherColumns: (state.config && state.config.teacherColumns) || {},
       interventionBelow: Math.min(100, Math.max(1, draft.interventionBelow || DEFAULT_INTERVENTION_BELOW)) });
     state.configDraft = null; // live subscription will now repopulate state.config with the saved version
     toast('Settings saved.');
@@ -2653,14 +2809,15 @@ function renderReportsPage(app, role) {
  *  per-subject and per-teacher totals, all cumulative and respecting the class/subject filters.
  *  Columns = current conduct categories + any retired labels still in history, so a row's
  *  Total always equals the sum of its visible columns. */
-function computeReportData(role) {
+function computeReportData(role) { return memo('rd:' + role + ':' + state.rClass + ':' + state.rSubject + ':' + state.rSort + ':' + reportPeriodLabel(), () => _computeReportData(role)); }
+function _computeReportData(role) {
   const isAdmin = role === 'admin';
   const roster = state.students
     .filter(s => state.rClass === 'ALL' || s.className === state.rClass)
     .sort((a,b) => a.className.localeCompare(b.className) || a.name.localeCompare(b.name));
   const current = conductCategories().map(c => c.label);
   const rows = roster.map(st => {
-    let ded = allDeductionsCumulative(st.id);
+    let ded = allDeductionsCumulative(st.id).filter(inReportRange);
     if (state.rSubject !== 'ALL') ded = ded.filter(d => d.subject === state.rSubject);
     return { st, ded };
   });
@@ -2693,7 +2850,7 @@ function computeReportData(role) {
     r.subjectStr = Object.keys(r.bySubject)
       .sort((a,b) => r.bySubject[b] - r.bySubject[a] || a.localeCompare(b))
       .map(s => s + ' ' + r.bySubject[s]).join(' · ');
-    if (isAdmin) r.iv = computeIntervention(r.st.id, state.rSubject);
+    if (isAdmin || teacherCanSee('intervention')) r.iv = computeIntervention(r.st.id, state.rSubject);
     const wk = deductionsThisWeek(r.st.id, currentWeekId()).filter(d => d.category !== 'Admin Adjustment' && (state.rSubject === 'ALL' || d.subject === state.rSubject));
     r.weekFlags = wk.length;
     r.sev = severityFor(r.weekFlags);
@@ -2733,43 +2890,54 @@ function renderReportsBody(role) {
     allSubjects.map(s => '<option value="' + escapeHtml(s) + '"' + (s === state.rSubject ? ' selected' : '') + '>' + escapeHtml(s) + '</option>').join('');
 
   const R = computeReportData(role);
-  const catHead = R.labels.map(l => '<th>' + escapeHtml(l) + (R.retired.has(l) ? ' <span class="subtle">(retired)</span>' : '') + '</th>').join('');
+  // Columns: admin sees all (with glasses toggles); teachers see only what admin made visible.
+  const vis = k => isAdmin || teacherCanSee(k);
+  const eye = k => isAdmin ? colEye(k) : '';
+  const hid = k => isAdmin && !teacherCanSee(k) ? ' t-hidden' : '';
+  const cats = R.labels.filter(l => vis('cat:' + l));
+  const showIv = isAdmin || teacherCanSee('intervention');
+  const catHead = cats.map(l => '<th class="col-cat' + hid('cat:' + l) + '">' + escapeHtml(l) + (R.retired.has(l) ? ' <span class="subtle">(retired)</span>' : '') + eye('cat:' + l) + '</th>').join('');
   const bubble = (n, onclick) => n > 0
     ? '<span class="countbubble" onclick="' + onclick + '">' + n + '</span>'
     : '<span class="countbubble zero">0</span>';
 
   const rows = R.rows.map(r => {
-    const catCells = R.labels.map(l =>
+    const catCells = cats.map(l =>
       '<td class="col-cat">' + bubble(r.counts[l], "openReportBreakdown('" + r.st.id + "','" + jsAttr(l) + "')") + '</td>').join('');
     let intervCell = '';
-    if (isAdmin) {
+    if (showIv) {
       const noteVal = (state.points[r.st.id] && state.points[r.st.id].adminNote) || '';
-      intervCell = '<td>' +
-        '<div class="interv-flag ' + r.iv.level + '">' + escapeHtml(r.iv.text) + '</div>' +
-        '<textarea class="note" style="margin-top:6px;min-height:34px;" id="ivnote_' + r.st.id + '" placeholder="Admin note...">' + escapeHtml(noteVal) + '</textarea>' +
-        '<button class="btn small" style="margin-top:4px;" onclick="saveAdminNote(\'' + r.st.id + '\')">Save</button>' +
+      intervCell = '<td>' + '<div class="interv-flag ' + r.iv.level + '">' + escapeHtml(r.iv.text) + '</div>' +
+        (isAdmin
+          ? '<textarea class="note" dir="auto" style="margin-top:6px;min-height:34px;" id="ivnote_' + r.st.id + '" placeholder="Admin note...">' + escapeHtml(noteVal) + '</textarea>' +
+            '<button class="btn small" style="margin-top:4px;" onclick="saveAdminNote(\'' + r.st.id + '\')">Save</button>'
+          : (noteVal ? '<div class="subtle" dir="auto" style="margin-top:4px;">' + escapeHtml(noteVal) + '</div>' : '')) +
       '</td>';
     }
-    return '<tr><td>' + r.st.className + '</td><td>' + escapeHtml(r.st.name) + '</td><td>' + r.st.id + '</td>' + catCells +
-      '<td class="col-total">' + r.total + '</td>' +
-      '<td class="col-sev"><span class="sev sev-' + r.sev.level + '" title="' + r.weekFlags + ' flag(s) this week">' + r.sev.text + '</span></td>' +
-      '<td class="subtle" style="min-width:170px;">' + (r.subjectStr ? escapeHtml(r.subjectStr) : '—') + '</td>' +
+    return '<tr>' + (vis('class') ? '<td>' + r.st.className + '</td>' : '') + '<td>' + escapeHtml(r.st.name) + '</td>' + (vis('id') ? '<td>' + r.st.id + '</td>' : '') + catCells +
+      (vis('total') ? '<td class="col-total">' + r.total + '</td>' : '') +
+      (vis('severity') ? '<td class="col-sev"><span class="sev sev-' + r.sev.level + '" title="' + r.weekFlags + ' flag(s) this week">' + r.sev.text + '</span></td>' : '') +
+      (vis('subjects') ? '<td class="subtle" style="min-width:170px;">' + (r.subjectStr ? escapeHtml(r.subjectStr) : '—') + '</td>' : '') +
       intervCell + '</tr>';
   }).join('');
-  const totalsRow = '<tr class="totals-row"><td colspan="3">Totals</td>' +
-    R.labels.map(l => '<td class="col-cat">' + R.colTotals[l] + '</td>').join('') +
-    '<td class="col-total">' + R.grand + '</td><td></td><td></td>' + (isAdmin ? '<td></td>' : '') + '</tr>';
+  const lead = 1 + (vis('class') ? 1 : 0) + (vis('id') ? 1 : 0);
+  const totalsRow = '<tr class="totals-row"><td colspan="' + lead + '">Totals</td>' +
+    cats.map(l => '<td class="col-cat">' + R.colTotals[l] + '</td>').join('') +
+    (vis('total') ? '<td class="col-total">' + R.grand + '</td>' : '') + (vis('severity') ? '<td></td>' : '') + (vis('subjects') ? '<td></td>' : '') + (showIv ? '<td></td>' : '') + '</tr>';
   const sv = severitySettings();
   const summaryView = state.rView === 'summary';
   const weeklyView = isAdmin && state.rView === 'weekly';
 
-  const tableHtml = '<div class="card"><div class="scrollx"><table class="report-table"><thead>' +
-      '<tr><th rowspan="2">Class</th><th rowspan="2">Student</th><th rowspan="2">ID</th>' +
-        '<th colspan="' + R.labels.length + '" class="flag-head">Behavioural Flag</th>' +
-        '<th rowspan="2" class="col-total">Total</th>' +
-        '<th rowspan="2" class="col-sev" title="Based on this week\'s flags">Severity<div class="th-sub">this week</div></th>' +
-        '<th rowspan="2">Flagged in (subject · count)</th>' +
-        (isAdmin ? '<th rowspan="2">Recommended Intervention</th>' : '') + '</tr>' +
+  const tableHtml = '<div class="card">' +
+      (isAdmin ? '<div class="subtle col-eye-help"><b class="period-tag">Period: ' + reportPeriodLabel() + '</b> ' + GLASSES + ' Click the glasses on a column to show or hide it in the teachers\' reports.</div>' : '') +
+      '<div class="scrollx"><table class="report-table"><thead>' +
+      '<tr>' + (vis('class') ? '<th rowspan="2" class="' + hid('class') + '">Class' + eye('class') + '</th>' : '') + '<th rowspan="2">Student</th>' +
+        (vis('id') ? '<th rowspan="2" class="' + hid('id') + '">ID' + eye('id') + '</th>' : '') +
+        (cats.length ? '<th colspan="' + cats.length + '" class="flag-head">Behavioural Flag</th>' : '') +
+        (vis('total') ? '<th rowspan="2" class="col-total' + hid('total') + '">Total' + eye('total') + '</th>' : '') +
+        (vis('severity') ? '<th rowspan="2" class="col-sev' + hid('severity') + '" title="Based on this week\'s flags">Severity<div class="th-sub">this week</div>' + eye('severity') + '</th>' : '') +
+        (vis('subjects') ? '<th rowspan="2" class="' + hid('subjects') + '">Flagged in (subject · count)' + eye('subjects') + '</th>' : '') +
+        (showIv ? '<th rowspan="2" class="' + hid('intervention') + '">Recommended Intervention' + eye('intervention') + '</th>' : '') + '</tr>' +
       '<tr>' + catHead + '</tr>' +
     '</thead><tbody>' + rows + totalsRow + '</tbody></table></div>' +
     '<div class="sev-legend"><span class="sev sev-urgent">Urgent</span> more than ' + sv.urgentAbove + ' flags this week' +
@@ -2777,6 +2945,7 @@ function renderReportsBody(role) {
       '<span class="sev sev-notable">Notable</span> fewer than ' + sv.notableBelow + '</div></div>';
   const summaryHtml = '<div class="card"><h2>Flags by Subject</h2>' +
       '<div class="subtle" style="margin-bottom:10px;">Which subjects are flagging most, highest first.</div>' +
+      (isAdmin ? '<div class="subtle" style="margin:-4px 0 10px;"><b class="period-tag">Period: ' + reportPeriodLabel() + '</b></div>' : '') +
       flagSummaryTable(R.subjects, R.labels, R.grand, false) + '</div>' +
     (isAdmin
       ? '<div class="card"><h2>Flags by Teacher <span class="subtle">(admin only)</span></h2>' +
@@ -2792,6 +2961,11 @@ function renderReportsBody(role) {
           '<button class="seg-btn' + (summaryView ? ' active' : '') + '" onclick="setRView(\'summary\')">' + ICONS.reports + '<span>Flags Summary</span></button>' +
           (isAdmin ? '<button class="seg-btn' + (weeklyView ? ' active' : '') + '" onclick="setRView(\'weekly\')">' + ICONS.summary + '<span>Weekly Summary</span></button>' : '') +
         '</div>' +
+        (isAdmin && !weeklyView ? '<div class="field"><label>Period</label><select onchange="setRRange(this.value)">' +
+          [['all', 'All time'], ['week', 'This week'], ['lastweek', 'Last week'], ['month', 'This month'], ['custom', 'Custom dates']]
+            .map(([v, l]) => '<option value="' + v + '"' + ((state.rRange || 'all') === v ? ' selected' : '') + '>' + l + '</option>').join('') + '</select></div>' +
+          (state.rRange === 'custom' ? '<div class="field"><label>From</label><input type="date" value="' + (state.rFrom || '') + '" onchange="setRDate(\'rFrom\', this.value)"></div>' +
+            '<div class="field"><label>To</label><input type="date" value="' + (state.rTo || '') + '" onchange="setRDate(\'rTo\', this.value)"></div>' : '') : '') +
         (summaryView || weeklyView ? '' : '<div class="field"><label>Order</label><select onchange="setRSort(this.value)">' +
           '<option value="name"' + (state.rSort === 'severity' ? '' : ' selected') + '>Class &amp; name</option>' +
           '<option value="severity"' + (state.rSort === 'severity' ? ' selected' : '') + '>Severity (most severe first)</option></select></div>') +
@@ -2814,7 +2988,7 @@ function renderReportBreakdownModal() {
   if (!state.reportBreakdownFor) return '';
   const { sNumber, category } = state.reportBreakdownFor;
   const st = state.students.find(s => s.id === sNumber);
-  let ded = allDeductionsCumulative(sNumber).filter(d => d.category === category);
+  let ded = allDeductionsCumulative(sNumber).filter(inReportRange).filter(d => d.category === category);
   if (state.rSubject !== 'ALL') ded = ded.filter(d => d.subject === state.rSubject);
   const bySubject = {};
   ded.forEach(d => { (bySubject[d.subject || '—'] = bySubject[d.subject || '—'] || []).push(d); });
@@ -2830,7 +3004,7 @@ function renderReportBreakdownModal() {
   return '<div class="modal-overlay" onclick="if(event.target===this)closeReportBreakdown()">' +
     '<div class="modal"><button class="btn ghost small close" aria-label="Close" onclick="closeReportBreakdown()">✕</button>' +
     '<h3>Not ' + escapeHtml(category) + ' — ' + escapeHtml(st ? st.name : sNumber) + '</h3>' +
-    '<div class="subtle" style="margin-bottom:8px;">Flagged ' + ded.length + ' time(s), all-time. Subject, teacher, date and note for each:</div>' + rows + '</div></div>';
+    '<div class="subtle" style="margin-bottom:8px;">Flagged ' + ded.length + ' time(s), ' + (reportRange() ? reportPeriodLabel().toLowerCase() : 'all-time') + '. Subject, teacher, date and note for each:</div>' + rows + '</div></div>';
 }
 async function saveAdminNote(sNumber) {
   const val = document.getElementById('ivnote_' + sNumber).value;
@@ -2984,9 +3158,6 @@ function prevWeekIdOf(weekId) {
 }
 function weekHasAnyData(weekId) {
   return Object.values(state.points).some(doc => doc && doc.weeks && doc.weeks[weekId]);
-}
-function dispChampions() {
-  return computeWeekSummary(currentWeekId()).classTotals.filter(c => c.rank <= 10);
 }
 /** Most recognitions this week. Same eligibility floor as the homepage boards (>= 75 pts).
  *  Ties at 5th place are included, capped at 8 so the slide stays readable. */
@@ -3180,21 +3351,27 @@ function rankClassList(list) {
 }
 /** Standings as they were at the end of yesterday (events dated before today, this week only).
  *  Returns null on the first day of the week: everyone starts level on 100. */
+/** Class ranks at an earlier moment, rebuilt from the timestamped log (nothing extra is stored).
+ *  Monday–Saturday: as at the end of yesterday. Sunday (first day of the week): as at one hour earlier,
+ *  so arrows show live movement within the lesson. Returns null while everyone is still level, so the
+ *  week never opens with a wall of down arrows. */
 function standingsBeforeToday(weekId) {
-  const today = todayISO();
-  let anyEarlier = false;
+  const today = todayISO(), firstDay = today === weekId, cutoff = Date.now() - 3600e3;
+  const earlier = x => firstDay
+    ? (x.time ? Date.parse(x.time) < cutoff : false)
+    : (x.date ? x.date < today : false);
   const byClass = {};
   state.students.forEach(st => {
     const wd = getWeekData(st.id, weekId);
-    const ded = (wd.deductions || []).filter(d => d.category !== 'Admin Adjustment' && d.date && d.date < today);
-    const rec = (wd.recognitions || []).filter(r => r.date && r.date < today);
-    if (ded.length || rec.length) anyEarlier = true;
+    const ded = (wd.deductions || []).filter(d => d.category !== 'Admin Adjustment' && earlier(d));
+    const rec = (wd.recognitions || []).filter(earlier);
     const b = byClass[st.className] || (byClass[st.className] = { className: st.className, sum: 0, count: 0, skills: 0 });
     b.sum += WEEK_START_POINTS - DEDUCTION_AMOUNT * ded.length; b.count++; b.skills += rec.length;
   });
-  if (!anyEarlier && new Date().getDay() === 0) return null;
   const list = Object.values(byClass).map(b => { const avg = b.count ? b.sum / b.count : 0; return { className: b.className, avgKey: Math.round(avg * 10) / 10, skills: b.skills }; });
-  const out = {}; rankClassList(list).forEach(c => { out[c.className] = c.rank; });
+  const ranked = rankClassList(list);
+  if (ranked.every(c => c.rank === 1)) return null; // everyone level then: nothing to compare against
+  const out = {}; ranked.forEach(c => { out[c.className] = c.rank; });
   return out;
 }
 function dispChampions() {
@@ -3596,7 +3773,7 @@ function buildReportWorkbook() {
   const fcell = (f, v, s) => ({ f, v, s });
   const q = s => '"' + String(s).replace(/"/g, '""') + '"';
   const filterText = 'Class: ' + (state.rClass === 'ALL' ? 'All classes' : state.rClass) + '   ·   Subject: ' +
-    (state.rSubject === 'ALL' ? 'All subjects' : state.rSubject) + '   ·   All-time (cumulative)   ·   Generated ' +
+    (state.rSubject === 'ALL' ? 'All subjects' : state.rSubject) + '   ·   Period: ' + reportPeriodLabel() + '   ·   Generated ' +
     new Date().toLocaleString() + ' by ' + (state.user ? state.user.name : '');
 
   // ---------- Deduction Log (one row per deduction) ----------
@@ -3650,7 +3827,7 @@ function buildReportWorkbook() {
   // ---------- Recognition Log ----------
   const recs = [];
   state.students.filter(s => state.rClass === 'ALL' || s.className === state.rClass).forEach(st =>
-    allRecognitionsCumulative(st.id).forEach(r => { if (state.rSubject === 'ALL' || r.subject === state.rSubject) recs.push({ st, r }); }));
+    allRecognitionsCumulative(st.id).forEach(r => { if ((state.rSubject === 'ALL' || r.subject === state.rSubject) && inReportRange(r)) recs.push({ st, r }); }));
   recs.sort((a, b) => (b.r.time || b.r.date || '').localeCompare(a.r.time || a.r.date || ''));
   const recSheet = { name: 'Recognition Log', tab: 'FFF5A623', freeze: 3, merges: ['A1:I1', 'A2:I2'], heights: { 0: 26, 2: 30 },
     widths: [12, 12, 8, 34, 11, 26, 22, 30, 50], rows: [] };
@@ -3751,6 +3928,7 @@ function buildReportWorkbook() {
 }
 
 async function exportReportsXLSX() {
+  clearMemo();
   let bytes;
   try { bytes = buildReportWorkbook(); } catch (e) { console.error(e); toast('Could not build the Excel report.'); return; }
   const name = 'G8_Behaviour_Report_' + (state.rClass === 'ALL' ? 'AllClasses' : state.rClass) + '_' +
@@ -3897,7 +4075,8 @@ function letterData(sNumber, weekId) {
   if (!skills.length && !top) return null;
   return { id: st.id, name: st.name, className: st.className, total: wd.total, weekId, skills, top };
 }
-function letterStudents(weekId) {
+function letterStudents(weekId) { return memo('ls:' + weekId, () => _letterStudents(weekId)); }
+function _letterStudents(weekId) {
   return state.students.map(s => letterData(s.id, weekId)).filter(Boolean)
     .sort((a, b) => a.className.localeCompare(b.className) || a.name.localeCompare(b.name));
 }
@@ -3995,6 +4174,7 @@ async function downloadAllLetters() {
   state.letterBusy = false; render();
 }
 function openLetterPreview() {
+  clearMemo();
   if (!letterStudents(state.aWeek).length) { toast('No recognition letters for this week yet.'); return; }
   state.letterPreview = true; render();
 }
@@ -4012,6 +4192,118 @@ function renderLetterPreview() {
 function letterBtn(sNumber) {
   return '<button class="letter-btn" title="Download parent letter (PDF)" onclick="downloadLetter(\'' + sNumber + '\')">' +
     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/><path d="M9 13h6M9 16.5h6"/></svg>PDF</button>';
+}
+
+
+/* ============================= ARABIC VIEW =============================
+   Teachers can switch the whole interface to Arabic (right-to-left) with the globe button.
+   It works on what is already drawn: a fixed phrase list plus patterns for text with numbers, so it
+   costs about a millisecond per screen update. Student names are never translated (until an Arabic
+   name column exists); the hallway slides stay in English. Notes can be typed in Arabic anywhere. */
+const AR = {
+  'AIS Middle Grades - Boys': 'مدارس الرواد العالمية - المرحلة المتوسطة (بنين)', 'Behaviour Management System': 'نظام إدارة السلوك',
+  'Class Deck': 'لوحة الصف', 'Home': 'الرئيسية', 'Reports': 'التقارير', 'Hallway': 'شاشة الممر', 'Sign out': 'تسجيل الخروج', 'Sign in': 'تسجيل الدخول',
+  'Sign in with your school email and password.': 'سجّل الدخول ببريدك المدرسي وكلمة المرور.', 'Email': 'البريد الإلكتروني', 'Password': 'كلمة المرور',
+  'Signing in…': 'جارٍ تسجيل الدخول…',
+  "Note: this login is for attribution only (so we know who logged what) — it is not secure, encrypted authentication. Don't use it to protect sensitive information.":
+    'ملاحظة: تسجيل الدخول هذا لمعرفة من سجّل كل إدخال فقط، وليس وسيلة حماية مشفّرة. لا تستخدمه لحماية معلومات حساسة.',
+  'Class': 'الصف', 'Subject': 'المادة', 'Select class…': 'اختر الصف…', 'Select subject…': 'اختر المادة…',
+  'Top 3 this week': 'الأفضل 3 هذا الأسبوع', 'Class Roster': 'قائمة الصف', 'class avg': 'متوسط الصف', 'this week': 'هذا الأسبوع',
+  'Choose a class and subject to see students.': 'اختر الصف والمادة لعرض الطلاب.',
+  'Select a student to log a behavior, or tick several students for a group entry.': 'اختر طالبًا لتسجيل السلوك، أو حدّد عدة طلاب لتسجيل جماعي.',
+  'Select a subject above to log a behavior.': 'اختر المادة في الأعلى لتسجيل السلوك.',
+  'Behavior Conduct': 'السلوك', 'Ready': 'مستعد', 'Respectful': 'محترم', 'Safe': 'آمن', 'Intact': 'سليم',
+  '−5 logged for': 'خُصمت 5 نقاط في', '. Add an optional note:': '. أضف ملاحظة (اختياري):', 'Save note': 'حفظ الملاحظة', 'Skip': 'تخطّي',
+  'Skills Recognition': 'تقدير المهارات', 'Swipe up': 'اسحب للأعلى', 'Open': 'فتح', 'Show': 'عرض',
+  'recognised. Add an optional note:': 'تم تقديره. أضف ملاحظة (اختياري):',
+  'Communication of Knowledge': 'توصيل المعرفة', 'Critical Thinking & Problem-Solving': 'التفكير الناقد وحل المشكلات',
+  'Creativity & Innovation': 'الإبداع والابتكار', 'Collaboration': 'التعاون',
+  'selected': 'محدّد', 'Clear selection': 'إلغاء التحديد', 'Clear': 'مسح', 'Log for group': 'تسجيل للمجموعة', '✕ Close': '✕ إغلاق',
+  'All Classes (avg pts)': 'جميع الصفوف (متوسط النقاط)', 'Top 5 Students': 'أفضل 5 طلاب', 'Needs Intervention': 'بحاجة إلى تدخّل',
+  'Nobody yet this week.': 'لا أحد بعد هذا الأسبوع.', 'No skills recognitions yet this week.': 'لا يوجد تقدير مهارات بعد هذا الأسبوع.', 'No data yet.': 'لا توجد بيانات بعد.',
+  'Reports (all-time, cumulative)': 'التقارير (تراكمية)', 'All classes': 'جميع الصفوف', 'All subjects': 'جميع المواد',
+  'Student Flags': 'مخالفات الطلاب', 'Flags Summary': 'ملخص المخالفات', 'Order': 'الترتيب', 'Class & name': 'الصف والاسم',
+  'Severity (most severe first)': 'الخطورة (الأشد أولًا)', '⬇ Download Excel report': '⬇ تنزيل تقرير Excel',
+  'Student': 'الطالب', 'ID': 'الرقم', 'Behavioural Flag': 'المخالفة السلوكية', 'Total': 'المجموع', 'Severity': 'الخطورة',
+  'Flagged in (subject · count)': 'المواد (المادة · العدد)', 'Totals': 'الإجمالي', 'Urgent': 'عاجلة', 'Severe': 'شديدة', 'Notable': 'ملحوظة',
+  'Recommended Intervention': 'التدخّل المقترح', 'Flags by Subject': 'المخالفات حسب المادة',
+  'Which subjects are flagging most, highest first.': 'المواد الأكثر تسجيلًا للمخالفات، الأعلى أولًا.', '% of all flags': '% من جميع المخالفات',
+  'Students flagged': 'الطلاب المسجّلون', 'No entries.': 'لا توجد إدخالات.',
+  'Hallway Display': 'شاشة الممر', 'Show the live leaderboards full screen at the end of a lesson. Only positive rankings are shown.':
+    'اعرض لوحات الصدارة المباشرة بملء الشاشة في نهاية الحصة. تُعرض الترتيبات الإيجابية فقط.',
+  'Theme': 'السمة', 'Landscape': 'أفقي', 'Portrait': 'عمودي', 'Preview': 'معاينة', 'Print PDF': 'طباعة PDF', 'Present': 'عرض',
+  'Print: choose "Save as PDF" in the print dialog to get a PDF, one slide per page. If the dialog doesn\'t open, press Ctrl+P (Cmd+P on Mac) while on this tab.':
+    'للطباعة: اختر "حفظ بتنسيق PDF" في نافذة الطباعة للحصول على ملف PDF بشريحة في كل صفحة. إذا لم تفتح النافذة، اضغط Ctrl+P (أو Cmd+P على Mac).',
+  'The Leaderboard': 'لوحة الصدارة', 'The Top 5': 'أفضل 5',
+  'Note saved.': 'تم حفظ الملاحظة.', 'Recognition logged.': 'تم تسجيل التقدير.', 'Could not save — please retry.': 'تعذّر الحفظ — حاول مرة أخرى.',
+  'Could not undo — please retry.': 'تعذّر التراجع — حاول مرة أخرى.',
+  // subjects
+  'Arabic': 'اللغة العربية', 'English': 'اللغة الإنجليزية', 'Mathematics': 'الرياضيات', 'Science': 'العلوم', 'Biology': 'الأحياء',
+  'Chemistry': 'الكيمياء', 'Physics': 'الفيزياء', 'Computer Science': 'علوم الحاسب', 'Islamic Studies': 'الدراسات الإسلامية',
+  'Islamic Studies (English)': 'الدراسات الإسلامية (بالإنجليزية)', 'Social Studies': 'الدراسات الاجتماعية', 'Physical Education': 'التربية البدنية',
+  'Business Administration & English': 'إدارة الأعمال واللغة الإنجليزية',
+};
+const AR_MONTHS = { Jan: 'يناير', Feb: 'فبراير', Mar: 'مارس', Apr: 'أبريل', May: 'مايو', Jun: 'يونيو', Jul: 'يوليو', Aug: 'أغسطس', Sep: 'سبتمبر', Sept: 'سبتمبر', Oct: 'أكتوبر', Nov: 'نوفمبر', Dec: 'ديسمبر' };
+const arDates = s => s.replace(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec)\b/g, m => AR_MONTHS[m]);
+const arWord = s => AR[s] || s;
+const AR_PATTERNS = [
+  [/^Week of (.+)$/, (m, a) => 'أسبوع ' + arDates(a)],
+  [/^(.+) Roster$/, (m, a) => 'قائمة ' + a],
+  [/^(\d+) \/ 100 pts this week(?: · (.+))?$/, (m, a, b) => a + ' / 100 نقطة هذا الأسبوع' + (b ? ' · ' + arWord(b) : '')],
+  [/^(\d+) pts this week$/, (m, a) => a + ' نقطة هذا الأسبوع'],
+  [/^−(\d+) · today$/, (m, a) => '−' + a + ' · اليوم'],
+  [/^All (\d+)$/, (m, a) => 'الكل ' + a],
+  [/^(\d+) of (\d+) left$/, (m, a, b) => a + ' من ' + b + ' متبقٍّ'],
+  [/^(\d+) students? selected$/, (m, a) => 'تم تحديد ' + a + ' طالب'],
+  [/^\((\d+) students\)$/, (m, a) => '(' + a + ' طالب)'],
+  [/^\+(\d+) more tied$/, (m, a) => '+' + a + ' متعادلون آخرون'],
+  [/^\(below (\d+) pts\)$/, (m, a) => '(أقل من ' + a + ' نقطة)'],
+  [/^Nobody below (\d+) points this week(.*)$/, (m, a) => 'لا يوجد طلاب أقل من ' + a + ' نقطة هذا الأسبوع'],
+  [/^(\d+)pt$/, (m, a) => a + ' نقطة'],
+  [/^more than (\d+) flags this week$/, (m, a) => 'أكثر من ' + a + ' مخالفة هذا الأسبوع'],
+  [/^fewer than (\d+)$/, (m, a) => 'أقل من ' + a],
+  [/^Not (Ready|Respectful|Safe)( — .+)?$/, (m, a, b) => 'غير ' + arWord(a) + (b || '')],
+  [/^Flagged (\d+) time\(s\), all-time\. .*$/, (m, a) => 'سُجّلت ' + a + ' مرة (تراكمي). المادة والمعلم والتاريخ والملاحظة لكل منها:'],
+  [/^Slides · (landscape|portrait)$/, (m, a) => 'الشرائح · ' + (a === 'landscape' ? 'أفقي' : 'عمودي')],
+  [/^−(\d+) (.+) logged for (\d+) students\.$/, (m, a, b, n) => 'خُصمت ' + a + ' نقاط (' + arWord(b) + ') لـ ' + n + ' طلاب.'],
+  [/^Undone for (.+?): (.+?) \(\+(\d+) back\)$/, (m, a, b, n) => 'تم التراجع لـ ' + a + ': ' + arWord(b) + ' (+' + n + ')'],
+  [/^Undone for (.+?): (.+)$/, (m, a, b) => 'تم التراجع لـ ' + a + ': ' + arWord(b)],
+  [/^Undo your last entry for this student today$/, () => 'تراجع عن آخر إدخال لك لهذا الطالب اليوم'],
+];
+function trAr(s) {
+  const t = String(s).replace(/\s+/g, ' ').trim();
+  if (!t) return s;
+  let out = AR[t];
+  if (out === undefined) for (const [re, fn] of AR_PATTERNS) { const m = t.match(re); if (m) { out = fn(...m); break; } }
+  if (out === undefined) { // leading emoji, e.g. "⭐ Top 5 Students"
+    const em = t.match(/^([^\p{L}\p{N}(+−-]+)(.+)$/u);
+    if (em && (AR[em[2]] !== undefined)) out = em[1] + AR[em[2]];
+    else if (em && em[2]) { for (const [re, fn] of AR_PATTERNS) { const m = em[2].match(re); if (m) { out = em[1] + fn(...m); break; } } }
+  }
+  return out === undefined ? s : s.replace(t, out);
+}
+function applyArabic(root) {
+  if (!root) return;
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode: n =>
+    n.parentElement && n.parentElement.closest('.disp-stage, .no-tr, script, style, textarea') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+  const nodes = []; let n; while ((n = w.nextNode())) nodes.push(n);
+  nodes.forEach(node => { if (/[A-Za-z]/.test(node.nodeValue)) { const v = trAr(node.nodeValue); if (v !== node.nodeValue) node.nodeValue = v; } });
+  root.querySelectorAll('[placeholder]').forEach(e => {
+    const ph = e.getAttribute('placeholder');
+    const map = { 'e.g. still talking after explanation started': 'مثال: استمر في الحديث بعد بدء الشرح',
+                  'e.g. explained the method clearly to his group': 'مثال: شرح الطريقة بوضوح لمجموعته' };
+    if (map[ph]) e.setAttribute('placeholder', map[ph]);
+  });
+}
+function arabicOn() { return state.lang === 'ar' && !(state.user && state.user.role === 'admin'); }
+function toggleLang() {
+  state.lang = state.lang === 'ar' ? 'en' : 'ar';
+  try { localStorage.setItem('g8_lang', state.lang); } catch (e) {}
+  render();
+}
+function langButton() {
+  if (state.user && state.user.role === 'admin') return '';
+  return '<button class="btn nav slim lang-btn no-tr" onclick="toggleLang()" title="العربية / English">' + ICONS.globe + '<span>' + (arabicOn() ? 'English' : 'عربي') + '</span></button>';
 }
 
 </script>
