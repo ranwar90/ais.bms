@@ -5,6 +5,7 @@
  *   GET  /api/db?c=points:42:<etag>,...        -> only what changed since the device's last copy
  *   POST /api/db  { op, path, data }           -> one write
  *   POST /api/db  { op: "batch", writes: [] }  -> several writes in one request (group entries)
+ *   GET  /api/db?doc=evidence/<id>             -> one absence-evidence photo/PDF (fetched only when opened)
  *
  * Sign-in is checked here against the staff records, so staff passwords (E-numbers) never reach
  * browsers. A sign-in pass lasts 30 days, signed with a private key the server creates itself
@@ -20,6 +21,10 @@ import { createHmac, timingSafeEqual, randomBytes } from "node:crypto";
 import seed from "../../data/seed-data.json" with { type: "json" };
 
 const COLLECTIONS = ["students", "staff", "points", "config"];
+// Absence evidence (sick-note photos) is kept one item per upload, outside the synced collections,
+// so devices never download photos unless someone presses "View evidence".
+const EVIDENCE = "evidence", EVIDENCE_MAX_BYTES = 400000;
+const evKey = id => "ev_" + String(id).replace(/[^A-Za-z0-9_-]/g, "");
 const STORE_NAME = "g8-discipline-tracker";
 const TOKEN_DAYS = 30;
 
@@ -136,6 +141,13 @@ export default async (req) => {
   if (!auth) return json({ error: "signed_out", message: "Please sign in again." }, 401);
   const isAdmin = auth.role === "admin";
 
+  if (req.method === "GET" && url.searchParams.get("doc")) {
+    const [coll, id] = String(url.searchParams.get("doc")).split("/");
+    if (coll !== EVIDENCE || !id) return json({ error: "Bad path" }, 400);
+    const doc = await store.get(evKey(id), { type: "json" });
+    return json({ exists: !!doc, id, doc: doc || null });
+  }
+
   if (req.method === "GET") {
     await ensureSeeded(store);
     const known = {}; // coll -> { seq, etag }
@@ -164,19 +176,29 @@ export default async (req) => {
     let body; try { body = await req.json(); } catch (e) { return json({ error: "Bad JSON" }, 400); }
     const list = body && body.op === "batch" ? (Array.isArray(body.writes) ? body.writes : []) : [body || {}];
     if (!list.length || list.length > 300) return json({ error: "Bad batch" }, 400);
-    const parsed = [];
+    const parsed = [], evidence = [];
     for (const w of list) {
       const [coll, id, ...rest] = String(w.path || "").split("/");
+      if (coll === EVIDENCE) { // teachers and admins may upload; stored separately
+        if (!id || rest.length || w.op !== "set" || !isObj(w.data)) return json({ error: "Bad evidence write" }, 400);
+        if (JSON.stringify(w.data).length > EVIDENCE_MAX_BYTES) return json({ error: "too_large", message: "That file is too large." }, 413);
+        evidence.push({ id, data: { ...w.data, byId: auth.sid } }); continue;
+      }
       if (!COLLECTIONS.includes(coll) || !id || rest.length) return json({ error: "Bad path" }, 400);
       if (!["set", "update", "delete"].includes(w.op)) return json({ error: "Bad op" }, 400);
       if (w.op !== "delete" && !isObj(w.data)) return json({ error: "Missing data" }, 400);
       if (!isAdmin && coll !== "points") return json({ error: "forbidden", message: "Only admins can change this." }, 403);
       parsed.push({ coll, id, op: w.op, data: w.data });
     }
+    for (const e of evidence) await store.setJSON(evKey(e.id), e.data);
     await ensureSeeded(store);
     const byColl = {};
     parsed.forEach((w, i) => (byColl[w.coll] = byColl[w.coll] || []).push({ ...w, i }));
     const results = new Array(parsed.length);
+    if (!parsed.length) { // evidence-only request
+      const ev = evidence.map(e => ({ ok: true, collection: EVIDENCE, id: e.id, deleted: false, doc: null }));
+      return body && body.op === "batch" ? json({ results: ev }) : json(ev[0]);
+    }
     for (const [coll, ws] of Object.entries(byColl)) {
       const r = await applyWrites(store, coll, ws);
       if (r.busy) return json({ error: "Busy, please retry" }, 409);
@@ -187,7 +209,7 @@ export default async (req) => {
           : { ok: false, collection: coll, id: w.id, error: res.error, message: res.message };
       });
     }
-    if (body && body.op === "batch") return json({ results });
+    if (body && body.op === "batch") return json({ results: results.concat(evidence.map(e => ({ ok: true, collection: EVIDENCE, id: e.id, deleted: false, doc: null }))) });
     const one = results[0];
     return one.ok ? json(one) : json({ error: one.error, message: one.message }, one.error === "not_found" ? 404 : 400);
   }
