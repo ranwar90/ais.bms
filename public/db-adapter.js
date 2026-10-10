@@ -91,6 +91,7 @@
   /* Saves made in the same moment are sent together as one request. */
   let queue = [], flushTimer = null;
   function write(op, path, data) {
+    if (path.split('/')[0] === 'evidence') return call('POST', { op, path, data }).then(() => undefined); // photos go alone, never synced
     return new Promise((resolve, reject) => {
       queue.push({ w: { op, path, data }, resolve, reject });
       if (!flushTimer) flushTimer = setTimeout(flush, 0);
@@ -137,6 +138,13 @@
       return {
         onSnapshot: (cb, err) => listen({ coll, id, cb, err }),
         set: data => write('set', path, data),
+        /** One-off read: evidence is fetched from the server; everything else comes from this device's synced copy. */
+        get: async () => {
+          if (coll === 'evidence') { const r = await call('GET', null, '?doc=' + encodeURIComponent(path)); return { exists: !!r.exists, id, data: () => r.doc }; }
+          if (!cols[coll]) await poll();
+          const docs = cols[coll] || {};
+          return { exists: id in docs, id, data: () => docs[id] };
+        },
         update: data => write('update', path, data),
         delete: () => write('delete', path),
       };
